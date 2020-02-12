@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: byebyers/netlify-cms-tutorial
+  repo: byebyers/ohmni-gatsby-template
   branch: master
 
 media_folder: content/assets
