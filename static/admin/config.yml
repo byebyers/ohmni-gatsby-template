@@ -7,8 +7,8 @@ media_folder: content/assets
 public_folder: /assets
 
 collections:
-  - name: post
-    label: Blog
+  - name: blog
+    label: Post
     folder: content/blog
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -22,8 +22,8 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-  - name: author
-    label: Authors
+  - name: authors
+    label: Author
     folder: content/authors
     create: true
     slug: "authors-{{slug}}"
