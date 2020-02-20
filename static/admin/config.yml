@@ -30,4 +30,5 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "author-page"}
       - {label: "Author Name", name: "title", widget: "string"}
+      - {label: "Author Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
