@@ -32,3 +32,15 @@ collections:
       - {label: "Author Name", name: "title", widget: "string"}
       - {label: "Author Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
+  - name: events
+    label: events
+    folder: content/events
+    create: true
+    slug: "events-{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
+      - {label: "Event Name", name: "title", widget: "string"}
+      - {label: "Start", name: "start-date", widget: "datetime"}
+      - {label: "End", name: "end-date", widget: "datetime"}
+      - {label: "Event Thumbnail", name: "thumbnail", widget: image}
+      - {label: "About", name: "description", widget: "text"}
