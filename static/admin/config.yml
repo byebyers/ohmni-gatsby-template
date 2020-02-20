@@ -33,7 +33,7 @@ collections:
       - {label: "Author Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
   - name: events
-    label: events
+    label: Event
     folder: content/events
     create: true
     slug: "events-{{year}}-{{month}}-{{day}}-{{slug}}"
