@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Fullban from "./full-banner/full-banner"
+import Fullban from "./banners/full-banner"
 import "./layout.css"
 
 const Layout = ({ children }) => {
