@@ -4,6 +4,12 @@
   height: calc((var(--vh, 1vh) * 100) - 88px);
 }
 
+.half-banner {
+  /* Half height - height of menu */
+  height: calc(50vh - 88px);
+  height: calc((var(--vh, 1vh) * 50) - 88px);
+}
+
 .display-banner {
   /* Center and scale the image nicely */
   background-attachment: fixed;
@@ -23,6 +29,12 @@
 .cover-background {
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.title-wrap {
+  color: white;
 }
 
 @media only screen and (max-width: 84em) {
