@@ -10,7 +10,7 @@ const Fullban = () => {
     class="big-banner display-banner">
       <div class="cover-background">
         <div class="title-wrap">
-          <h1><span class="big-title">Big Headline</span></h1>
+          <h1>Big Headline</h1>
           <p class="big-content">Little Headline</p>
         </div>
       </div>
