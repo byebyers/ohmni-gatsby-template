@@ -7,10 +7,10 @@ media_folder: content/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
-    label_singular: Post
-    folder: content/blog
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Post"
+    folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -23,10 +23,10 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-  - name: authors
-    label: Authors
-    label_singular: Author
-    folder: content/authors
+  - name: "authors"
+    label: "Authors"
+    label_singular: "Author"
+    folder: "content/authors"
     create: true
     slug: "authors-{{slug}}"
     fields:
@@ -34,10 +34,10 @@ collections:
       - {label: "Author Name", name: "title", widget: "string"}
       - {label: "Author Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
-  - name: events
-    label: Events
-    label_singular: Event
-    folder: content/events
+  - name: "events"
+    label: "Events"
+    label_singular: "Event"
+    folder: "content/events"
     create: true
     slug: "events-{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -47,3 +47,10 @@ collections:
       - {label: "End", name: "end-date", widget: "datetime"}
       - {label: "Event Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
+  - name: "about"
+    label: "About"
+    file: "src/pages/about/index.md"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
