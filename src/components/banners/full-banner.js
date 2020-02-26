@@ -8,10 +8,10 @@ const Fullban = () => {
         backgroundImage: `url(https://res.cloudinary.com/db4y7ocbu/image/upload/v1528328041/sample.jpg)`
       }}
     class="big-banner display-banner">
-      <div class="cover-background">
-        <div class="title-wrap">
+      <div className="cover-background">
+        <div className="title-wrap">
           <h1>Big Headline</h1>
-          <p class="big-content">Little Headline</p>
+          <p className="big-content">Little Headline</p>
         </div>
       </div>
     </section>
