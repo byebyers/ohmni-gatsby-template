@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
       />
-      <Link to="/page-2/">Go to page 2</Link>
+      <Link to="/about/">About Page</Link>
     </Layout>
   )
 }
