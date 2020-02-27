@@ -1,6 +1,7 @@
 ---
-templateKey: 'home-page'
-path: /
+templateKey: home-page
+banner: /assets/fiver4.jpg
 heading: About our values
 subheading: More about Values
 ---
+
