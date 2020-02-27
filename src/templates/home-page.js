@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,7 +13,6 @@ const IndexPage = ({ data }) => {
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
       />
-      <Link to="/about/">About Page</Link>
     </Layout>
   )
 }
