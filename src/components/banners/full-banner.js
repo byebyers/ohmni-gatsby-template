@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from 'prop-types'
 import './banners.scss'
 
-const Fullban = ({ heading, subheading }) => {
+const Fullban = ({ heading, subheading, banner }) => {
   return (
     <section
       style={{
-        backgroundImage: `url(https://res.cloudinary.com/db4y7ocbu/image/upload/v1528328041/sample.jpg)`
+        backgroundImage: `url('../..${banner}')`
       }}
     className="big-banner display-banner">
       <div className="cover-background">
@@ -22,6 +22,7 @@ const Fullban = ({ heading, subheading }) => {
 Fullban.propTypes = {
   heading: PropTypes.string.isRequired,
   subheading: PropTypes.string,
+  banner: PropTypes.string,
 }
 
 export default Fullban

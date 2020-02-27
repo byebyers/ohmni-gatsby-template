@@ -5,7 +5,7 @@ date: 2020-02-25T19:50:14.448Z
 author: Jacob Byers
 description: Description Test
 featuredpost: false
-featuredimage: /assets/fiver4.jpg
+featuredimage: /img/fiver4.jpg
 tags:
   - tag1
   - tag2

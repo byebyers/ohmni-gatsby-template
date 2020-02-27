@@ -12,6 +12,7 @@ const IndexPage = ({ data }) => {
       <Fullban
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
+        banner={post.frontmatter.banner}
       />
     </Layout>
   )
@@ -26,6 +27,7 @@ export const homePageQuery = graphql`
       frontmatter {
         heading
         subheading
+        banner
       }
     }
   }
