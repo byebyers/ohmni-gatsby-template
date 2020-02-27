@@ -1,0 +1,17 @@
+.nav-container {
+  max-width: 50vw;
+  padding: 1.45rem 1.0875rem;
+  margin: 0 0 0 auto;
+  align-items: center;
+}
+
+.nav-container > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-container > ul > li {
+  padding: 0 1rem;
+  margin: 0;
+}

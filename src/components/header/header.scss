@@ -1,0 +1,14 @@
+.main-header {
+  background-color: rebeccapurple;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  max-width: 50vw;
+  padding: 1.45rem 1.0875rem;
+}
+
+.header-container > * {
+  margin: 0;
+}
