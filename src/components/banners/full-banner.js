@@ -1,7 +1,8 @@
 import React from "react"
+import PropTypes from 'prop-types'
 import './banners.scss'
 
-const Fullban = () => {
+const Fullban = ({ heading, subheading }) => {
   return (
     <section
       style={{
@@ -10,12 +11,17 @@ const Fullban = () => {
     class="big-banner display-banner">
       <div className="cover-background">
         <div className="title-wrap">
-          <h1>Big Headline</h1>
-          <p className="big-content">Little Headline</p>
+          <h1>{heading}</h1>
+          <p className="big-content">{subheading}</p>
         </div>
       </div>
     </section>
   )
+}
+
+Fullban.propTypes = {
+  heading: PropTypes.string.isRequired,
+  subheading: PropTypes.string,
 }
 
 export default Fullban
