@@ -8,7 +8,7 @@ const Fullban = ({ heading, subheading }) => {
       style={{
         backgroundImage: `url(https://res.cloudinary.com/db4y7ocbu/image/upload/v1528328041/sample.jpg)`
       }}
-    class="big-banner display-banner">
+    className="big-banner display-banner">
       <div className="cover-background">
         <div className="title-wrap">
           <h1>{heading}</h1>
