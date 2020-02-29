@@ -10,11 +10,13 @@ export const IndexPageTemplate = ({
   subheading,
   banner,
 }) => (
+  <div>
   <Fullban
     heading={heading}
     subheading={subheading}
     banner={banner}
   />
+  </div>
 )
 
 IndexPageTemplate.propTypes = {
