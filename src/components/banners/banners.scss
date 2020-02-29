@@ -1,6 +1,7 @@
 .big-banner {
   /* Full height - height of menu */
-  height: 80vh;
+  height: calc(100vh - 88px);
+  height: calc((var(--vh, 1vh) * 100) - 88px);
 }
 
 .half-banner {

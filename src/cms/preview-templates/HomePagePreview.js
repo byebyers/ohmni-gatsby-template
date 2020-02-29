@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/home-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
@@ -16,13 +15,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   } else {
     return <div>Loading...</div>
   }
-}
-
-IndexPagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  getAsset: PropTypes.func,
 }
 
 export default IndexPagePreview
