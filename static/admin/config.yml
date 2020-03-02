@@ -58,7 +58,7 @@ collections:
     files:
       - file: "src/pages/index.md"
         label: "Home"
-        name: "Home"
+        name: "home"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: "Banner", name: "banner", widget: "image"}

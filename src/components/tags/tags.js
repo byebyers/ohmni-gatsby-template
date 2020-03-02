@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "./tags.module.scss"
 
 // Components
 import { Link, graphql } from "gatsby"

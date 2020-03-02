@@ -17,10 +17,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
       },
     },
     {
@@ -86,14 +89,20 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-sass`,
     {
        resolve: `gatsby-plugin-typography`,
        options: {
          pathToConfigModule: `src/utils/typography`,
        },
      },
+     {
+       resolve: 'gatsby-plugin-netlify-cms',
+       options: {
+         modulePath: `${__dirname}/src/cms/cms.js`,
+       },
+     },
+     `gatsby-plugin-offline`,
+     "gatsby-plugin-netlify",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

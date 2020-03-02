@@ -46,7 +46,9 @@ export const homePageQuery = graphql`
       frontmatter {
         heading
         subheading
-        banner
+        banner {
+          relativePath
+        }
       }
     }
   }
