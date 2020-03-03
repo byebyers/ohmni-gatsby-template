@@ -6,7 +6,9 @@ const Fullban = ({ heading, subheading, banner }) => {
   return (
     <section
       style={{
-        backgroundImage: `url('../..${banner}')`
+        backgroundImage: `url('${
+          !!banner.childImageSharp ? banner.childImageSharp.fluid.src : banner
+        }')`
       }}
     className="big-banner display-banner">
       <div className="cover-background">

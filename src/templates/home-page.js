@@ -20,11 +20,12 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  banner: PropTypes.string,
+  banner: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data
+  console.log(post.frontmatter.banner)
   return (
     <Layout>
       <SEO title="Home" />
@@ -47,7 +48,11 @@ export const homePageQuery = graphql`
         heading
         subheading
         banner {
-          relativePath
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
