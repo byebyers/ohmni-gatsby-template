@@ -3,18 +3,27 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Fullban from "../components/banners/full-banner"
+import "../components/banners/banners.scss"
 
 export const IndexPageTemplate = ({
   heading,
   subheading,
   banner,
 }) => (
-  <Fullban
-    heading={heading}
-    subheading={subheading}
-    banner={banner}
-  />
+  <section
+    style={{
+      backgroundImage: `url('${
+        !!banner.childImageSharp ? banner.childImageSharp.fluid.src : banner
+      }')`
+    }}
+  className="big-banner display-banner">
+    <div className="cover-background">
+      <div className="title-wrap">
+        <h1>{heading}</h1>
+        <p className="big-content">{subheading}</p>
+      </div>
+    </div>
+  </section>
 )
 
 IndexPageTemplate.propTypes = {
