@@ -42,7 +42,7 @@ export default IndexPage
 
 export const homePageQuery = graphql`
   query HomePage($id: String) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
         heading
