@@ -41,46 +41,18 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    >
+      <html lang={lang} />
+      <title>{title}</title>
+      <meta content={metaDescription} name="description" />
+      <meta content={title} name="og:title" />
+      <meta content={metaDescription} name="og:description" />
+      <meta content="website" name="og:type" />
+      <meta content="twitter:card" name="summary" />
+      <meta content={title} name="twitter:title" />
+      <meta content={metaDescription} name="twitter:description" />
+    </Helmet>
   )
 }
 
