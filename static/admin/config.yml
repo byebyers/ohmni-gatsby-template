@@ -64,6 +64,8 @@ collections:
           - {label: "Banner", name: "banner", widget: "image"}
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Subheading", name: "subheading", widget: "markdown"}
+          - {label: "OneColHeadline", name: "onecolheadline", widget: "string"}
+          - {label: "OneColContent", name: "onecolcontent", widget: "markdown"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

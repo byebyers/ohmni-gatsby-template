@@ -1,0 +1,10 @@
+.oh-col {
+  display: grid;
+  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 50rem) minmax(.5rem, 1fr);
+  padding: 5rem 0
+}
+
+.one-col-div {
+  grid-column: 2;
+  text-align: center;
+}
