@@ -2,25 +2,37 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Content, { HTMLContent } from '../components/content'
+import Halfban from "../components/banners/half-banner"
+import Content, { HTMLContent } from '../components/content/content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+
+export const AboutPageTemplate = ({
+  heading,
+  subheading,
+  banner,
+  content,
+  contentComponent,
+}) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section>
-      <h2 className="pepper">
-        {title}
-      </h2>
+    <div>
+      <Halfban
+        heading={heading}
+        subheading={subheading}
+        banner={banner}
+      />
       <PageContent className="content" content={content} />
-    </section>
+    </div>
   )
 }
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  banner: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  contentComponent: PropTypes.func
 }
 
 const AboutPage = ({ data }) => {
@@ -30,7 +42,9 @@ const AboutPage = ({ data }) => {
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
+        heading={post.frontmatter.heading}
+        subheading={post.frontmatter.subheading}
+        banner={post.frontmatter.banner}
         content={post.html}
       />
     </Layout>
@@ -43,12 +57,20 @@ AboutPage.propTypes = {
 
 export default AboutPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+export const homePageQuery = graphql`
+  query AboutPageTemplate($id: String) {
+    markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "about-page" } }) {
       html
       frontmatter {
-        title
+        heading
+        subheading
+        banner {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -11,18 +11,18 @@ export const IndexPageTemplate = ({
   subheading,
   banner,
   onecolheadline,
-  onecolcontent
+  onecolcontent,
 }) => (
   <div>
-  <Fullban
-    heading={heading}
-    subheading={subheading}
-    banner={banner}
-  />
-  <Onecol
-    onecolheadline={onecolheadline}
-    onecolcontent={onecolcontent}
-  />
+    <Fullban
+      heading={heading}
+      subheading={subheading}
+      banner={banner}
+    />
+    <Onecol
+      onecolheadline={onecolheadline}
+      onecolcontent={onecolcontent}
+    />
   </div>
 )
 
@@ -30,6 +30,8 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   banner: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  onecolheadline: PropTypes.string,
+  onecolcontent: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
@@ -47,6 +49,10 @@ const IndexPage = ({ data }) => {
       />
     </Layout>
   )
+}
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
 export default IndexPage

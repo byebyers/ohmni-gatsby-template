@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from 'prop-types'
 import './banners.scss'
 
-const Fullban = ({ heading, subheading, banner }) => {
+const Halfban = ({ heading, subheading, banner }) => {
   return (
     <section
       style={{
@@ -10,7 +10,7 @@ const Fullban = ({ heading, subheading, banner }) => {
           !!banner.childImageSharp ? banner.childImageSharp.fluid.src : banner
         }')`
       }}
-    className="big-banner display-banner">
+    className="half-banner display-banner">
       <div className="cover-background">
         <div className="title-wrap">
           <h1>{heading}</h1>
@@ -21,10 +21,10 @@ const Fullban = ({ heading, subheading, banner }) => {
   )
 }
 
-Fullban.propTypes = {
+Halfban.propTypes = {
   heading: PropTypes.string.isRequired,
   subheading: PropTypes.string,
   banner: PropTypes.string,
 }
 
-export default Fullban
+export default Halfban
