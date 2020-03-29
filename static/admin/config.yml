@@ -75,3 +75,11 @@ collections:
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Subheading", name: "subheading", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/blog/index.md"
+        label: "Blog"
+        name: "blog"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-page"}
+          - {label: "Banner", name: "banner", widget: "image"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Subheading", name: "subheading", widget: "string"}

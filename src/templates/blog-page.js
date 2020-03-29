@@ -2,18 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Halfban from "../components/banners/half-banner"
-import Content, { HTMLContent } from '../components/content/content'
+import Halfban from '../components/banners/half-banner'
+import BlogRoll from '../components/blog-roll/blog-roll'
 
-
-export const AboutPageTemplate = ({
+export const BlogPageTemplate = ({
   heading,
   subheading,
   banner,
-  content,
-  contentComponent,
 }) => {
-  const PageContent = contentComponent || Content
 
   return (
     <div>
@@ -22,43 +18,39 @@ export const AboutPageTemplate = ({
         subheading={subheading}
         banner={banner}
       />
-      <PageContent className="content" content={content} />
+      <BlogRoll />
     </div>
   )
 }
 
-AboutPageTemplate.propTypes = {
+BlogPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   banner: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  content: PropTypes.string,
-  contentComponent: PropTypes.func
 }
 
-const AboutPage = ({ data }) => {
+const BlogPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
+      <BlogPageTemplate
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
         banner={post.frontmatter.banner}
-        content={post.html}
       />
     </Layout>
   )
 }
 
-AboutPage.propTypes = {
+BlogPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default BlogPage
 
-export const aboutPageQuery = graphql`
-  query AboutPageTemplate($id: String) {
+export const blogPageQuery = graphql`
+  query BlogPageTemplate($id: String) {
     markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "about-page" } }) {
       html
       frontmatter {
