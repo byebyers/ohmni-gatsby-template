@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from '../preview-compatible-image'
+import './blog-roll.scss'
 
 class BlogRoll extends React.Component {
   render() {
@@ -9,18 +10,42 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="oh-post">
+        <div className="posts-div">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`blog-post-container ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <header>
+                <div className="blog-post-content">
+                  <span className="blog-category">Category</span>
+                  <Link
+                    className="blog-title"
+                    to={post.fields.slug}
+                  >
+                    {post.frontmatter.title}
+                  </Link>
+                  <Link
+                    className="blog-details blog-excerpt"
+                    to={post.fields.slug}
+                  >
+                    {post.excerpt}
+                  </Link>
+                  <div>
+                    <div className="blog-author">
+                      {post.frontmatter.author}
+                    </div>
+                    <div className="blog-details">
+                      <span>{post.frontmatter.date} ·&nbsp;</span>
+                      <span>{post.timeToRead} min read</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="blog-image-container">
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="blog-post-image">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -29,30 +54,10 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
+                </div>
               </article>
-            </div>
           ))}
+          </div>
       </div>
     )
   }
@@ -81,9 +86,11 @@ export default () => (
               fields {
                 slug
               }
+              timeToRead
               frontmatter {
                 title
                 templateKey
+                author
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {

@@ -6,9 +6,9 @@ import "./nav.scss"
 const Nav = () => (
   <div className="nav-container">
     <ul>
-      <li><Link to="/" className="links">Home</Link></li>
-      <li><Link to="/about/" className="links">About</Link></li>
-      <li><Link to="/blog/" className="links">Blog</Link></li>
+      <li><Link to="/" className="text-white">Home</Link></li>
+      <li><Link to="/about/" className="text-white">About</Link></li>
+      <li><Link to="/blog/" className="text-white">Blog</Link></li>
     </ul>
   </div>
 )
