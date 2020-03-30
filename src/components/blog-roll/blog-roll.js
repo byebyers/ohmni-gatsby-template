@@ -45,8 +45,11 @@ class BlogRoll extends React.Component {
                 </div>
                 <div className="blog-image-container">
                   {post.frontmatter.featuredimage ? (
-                    <div className="blog-post-image">
-                      <Link to={post.fields.slug}>
+
+                      <Link
+                        className="blog-post-image"
+                        to={post.fields.slug}
+                      >
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -54,7 +57,7 @@ class BlogRoll extends React.Component {
                         }}
                       />
                       </Link>
-                    </div>
+                    
                   ) : null}
                 </div>
               </article>

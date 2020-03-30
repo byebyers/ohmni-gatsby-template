@@ -74,13 +74,4 @@
   .blog-post-container {
     grid-template-columns: 3fr 1fr;
   }
-  .blog-post-image {
-    width: 100% !important;
-  }
-}
-
-@media only screen and (max-width: 34rem) {
-  .blog-post-image {
-    padding: 40% 0; /* 1:1 Aspect Ratio */
-  }
 }
