@@ -71,4 +71,11 @@
   .posts-div {
     width: 90vw;
   }
+  .blog-post-container {
+    grid-template-columns: 3fr 1fr;
+  }
+  .blog-post-image {
+    width: 100% !important;
+    padding: 40% 0; /* 1:1 Aspect Ratio */
+  }
 }
