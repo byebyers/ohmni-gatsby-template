@@ -5,12 +5,18 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
+import PreviewCompatibleImage from '../components/preview-compatible-image'
 import Content, { HTMLContent } from '../components/content/content'
+import './blog-post.scss'
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
+  featuredimage,
+  author,
+  date,
+  timeToRead,
   tags,
   title,
   helmet,
@@ -22,9 +28,34 @@ export const BlogPostTemplate = ({
       <section>
         {helmet || ''}
         <h1 className="post-title">{title}</h1>
-        <h2 className="post-subheader">test</h2>
-        <p></p>
-        <hr />
+        <p className="post-subheader">{description}</p>
+        <div className="post-details">
+          <div className="post-author-pic">
+            <Link to={`/`}>
+              <img alt="Vinc" src="https://miro.medium.com/fit/c/120/120/0*ghwPeU9symnr3jY-.jpg" />
+            </Link>
+          </div>
+          <div className="post-detail-block">
+            <div className="post-author">
+              {author}
+            </div>
+            <div className="post-fine-details">
+              <span>{date} ·&nbsp;</span>
+              <span>{timeToRead} min read</span>
+            </div>
+          </div>
+        </div>
+        <div className="post-image">
+          <PreviewCompatibleImage
+            imageInfo={{
+              image: featuredimage,
+              alt: `featured image thumbnail for post ${title}`,
+            }}
+          />
+          <div className="post-fine-details photo-details">
+            <span>Photo Credit placed here</span>
+          </div>
+        </div>
         <div className="post-text">
           <PostContent content={content} />
         </div>
@@ -49,6 +80,8 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  featureimage: PropTypes.string,
+  author: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -62,6 +95,10 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        featuredimage={post.frontmatter.featuredimage}
+        author={post.frontmatter.author}
+        date={post.frontmatter.date}
+        timeToRead={post.timeToRead}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -91,10 +128,19 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 120, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        author
         tags
       }
     }

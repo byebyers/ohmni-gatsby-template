@@ -23,6 +23,42 @@
   margin: 1rem 0 0 0;
 }
 
+.post-subheader {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: grey;
+}
+
+.post-details {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  align-items: center;
+  margin: 0 0 3rem 0;
+}
+
+.post-author {
+  font-size: .8rem;
+  color: black;
+}
+
+.post-fine-details {
+  font-size: .8rem;
+  color: grey;
+  display: flex;
+}
+
+.photo-details {
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.post-author-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
 /* position images to take up all three columns */
 article img {
   grid-column: 1 / 4;
