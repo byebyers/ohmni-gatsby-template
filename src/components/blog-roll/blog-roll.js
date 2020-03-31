@@ -10,8 +10,7 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="oh-post">
-        <div className="posts-div">
+      <div>
         {posts &&
           posts.map(({ node: post }) => (
               <article
@@ -57,12 +56,11 @@ class BlogRoll extends React.Component {
                         }}
                       />
                       </Link>
-                    
+
                   ) : null}
                 </div>
               </article>
           ))}
-          </div>
       </div>
     )
   }

@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Container from '../components/container/container'
 import Halfban from "../components/banners/half-banner"
 import Content, { HTMLContent } from '../components/content/content'
-
 
 export const AboutPageTemplate = ({
   heading,
@@ -22,7 +22,9 @@ export const AboutPageTemplate = ({
         subheading={subheading}
         banner={banner}
       />
-      <PageContent className="content" content={content} />
+      <Container>
+          <PageContent className="content" content={content} />
+      </Container>
     </div>
   )
 }

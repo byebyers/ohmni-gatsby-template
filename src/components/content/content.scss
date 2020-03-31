@@ -1,13 +1,3 @@
-.content-wrapper {
-  display: grid;
-  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 50vw) minmax(.5rem, 1fr);
-  padding: 5rem 0;
-}
-
-.content-div {
-  grid-column: 2;
-}
-
 .content, .taglist {
   grid-column: 2;
   list-style: none;
@@ -23,11 +13,5 @@
     padding: 0 2rem 1rem 0;
     margin-bottom: 1.5rem;
     margin-top: 0;
-  }
-}
-
-@media only screen and (max-width: 56rem) {
-  .content-div {
-    width: 90vw;
   }
 }

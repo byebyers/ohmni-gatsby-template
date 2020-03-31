@@ -1,0 +1,15 @@
+.container-wrapper {
+  display: grid;
+  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 50vw) minmax(.5rem, 1fr);
+  padding: 5rem 0;
+}
+
+.container-div {
+  grid-column: 2;
+}
+
+@media only screen and (max-width: 56rem) {
+  .container-div {
+    width: 90vw;
+  }
+}

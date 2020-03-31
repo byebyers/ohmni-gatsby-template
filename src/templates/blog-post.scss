@@ -1,0 +1,39 @@
+.post {
+  display: grid;
+  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 50rem) minmax(.5rem, 1fr);
+  padding: 5rem 0;
+}
+
+.post-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 0 0 8rem 0;
+}
+
+/* position text paragraphs into the second (middle) column */
+.post-div {
+  grid-column: 2;
+}
+
+.post-text > h3 {
+  margin: 3rem 0 -1rem 0;
+}
+
+.highlight {
+  margin: 1rem 0 0 0;
+}
+
+/* position images to take up all three columns */
+article img {
+  grid-column: 1 / 4;
+  width: 100%;
+  height: auto;
+  max-width: 100ch;
+  justify-self: center;
+}
+
+@media only screen and (max-width: 56rem) {
+  .post-div {
+    width: 90vw;
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Container from '../components/container/container'
 import Halfban from '../components/banners/half-banner'
 import BlogRoll from '../components/blog-roll/blog-roll'
 
@@ -18,7 +19,9 @@ export const BlogPageTemplate = ({
         subheading={subheading}
         banner={banner}
       />
+      <Container>
       <BlogRoll />
+      </Container>
     </div>
   )
 }
