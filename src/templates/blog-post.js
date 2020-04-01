@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import PreviewCompatibleImage from '../components/preview-compatible-image'
 import Content, { HTMLContent } from '../components/content/content'
+import TagSection from '../components/tags/tag-section'
 import './blog-post.scss'
 
 export const BlogPostTemplate = ({
@@ -59,18 +59,7 @@ export const BlogPostTemplate = ({
         <div className="post-text">
           <PostContent content={content} />
         </div>
-        {tags && tags.length ? (
-          <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
-            <ul className="taglist">
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        <TagSection tags={tags} />
       </section>
     </Container>
   )

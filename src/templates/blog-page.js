@@ -54,7 +54,7 @@ export default BlogPage
 
 export const blogPageQuery = graphql`
   query BlogPageTemplate($id: String) {
-    markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "about-page" } }) {
+    markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "blog-page" } }) {
       html
       frontmatter {
         heading
