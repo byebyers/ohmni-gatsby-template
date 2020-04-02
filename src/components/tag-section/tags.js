@@ -6,7 +6,7 @@ import { Link, graphql } from "gatsby"
 import PreviewCompatibleImage from '../preview-compatible-image'
 import Layout from '../layout/layout'
 import Container from '../container/container'
-import '../rolls/rolls.scss'
+import '../rolls/rolls.scss' //from rolls file
 
 const TagRoll = ({ pageContext, data }) => {
     const { tag } = pageContext

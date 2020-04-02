@@ -6,7 +6,7 @@ import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import PreviewCompatibleImage from '../components/preview-compatible-image'
 import Content, { HTMLContent } from '../components/content/content'
-import TagSection from '../components/tags/tag-section'
+import TagSection from '../components/tag-section/tag-section'
 import './blog-post.scss'
 
 export const BlogPostTemplate = ({
