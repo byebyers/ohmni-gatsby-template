@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from '../preview-compatible-image'
-import './blog-roll.scss'
+import './rolls.scss'
 
 class BlogRoll extends React.Component {
   render() {
@@ -14,39 +14,39 @@ class BlogRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
               <article
-                className={`blog-post-container ${
+                className={`roll-post-container ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <div className="blog-post-content">
-                  <span className="blog-category">Category</span>
+                <div className="roll-post-content">
+                  <span className="roll-category">Category</span>
                   <Link
-                    className="blog-title"
+                    className="roll-title"
                     to={post.fields.slug}
                   >
                     {post.frontmatter.title}
                   </Link>
                   <Link
-                    className="blog-details blog-excerpt"
+                    className="roll-details roll-excerpt"
                     to={post.fields.slug}
                   >
                     {post.excerpt}
                   </Link>
                   <div>
-                    <div className="blog-author">
+                    <div className="roll-author">
                       {post.frontmatter.author}
                     </div>
-                    <div className="blog-details">
+                    <div className="roll-details">
                       <span>{post.frontmatter.date} ·&nbsp;</span>
                       <span>{post.timeToRead} min read</span>
                     </div>
                   </div>
                 </div>
-                <div className="blog-image-container">
+                <div className="roll-image-container">
                   {post.frontmatter.featuredimage ? (
 
                       <Link
-                        className="blog-post-image"
+                        className="roll-post-image"
                         to={post.fields.slug}
                       >
                       <PreviewCompatibleImage

@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import Halfban from '../components/banners/half-banner'
-import BlogRoll from '../components/blog-roll/blog-roll'
+import BlogRoll from '../components/rolls/blog-roll'
 
 export const BlogPageTemplate = ({
   heading,
