@@ -2,16 +2,19 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import AuthorSection from '../components/author-section/author-section'
+import Container from '../components/container/container'
 
 export default ({ data }) => {
   const author = data.markdownRemark
   return (
     <Layout>
+      <Container>
       <AuthorSection
         author={author.frontmatter.title}
         desc={author.frontmatter.description}
         thumb={author.frontmatter.thumbnail}
       />
+      </Container>
     </Layout>
   )
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import PreviewCompatibleImage from '../components/preview-compatible-image'
-import '.author-section.scss'
+import PreviewCompatibleImage from '../preview-compatible-image'
+import './author-section.scss'
 
 
 const AuthorSection = ({
