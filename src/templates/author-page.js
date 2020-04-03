@@ -14,6 +14,7 @@ export default ({ data }) => {
         desc={author.frontmatter.description}
         thumb={author.frontmatter.thumbnail}
       />
+      <hr />
       </Container>
     </Layout>
   )

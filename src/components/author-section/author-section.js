@@ -10,15 +10,21 @@ const AuthorSection = ({
   thumb,
 }) => {
   return (
-    <div>
-      <h1>{author}</h1>
-      <div dangerouslySetInnerHTML={{ __html: desc }} />
-      <PreviewCompatibleImage
-        imageInfo={{
-          image: thumb,
-          alt: `featured image thumbnail for post ${author}`,
-        }}
-      />
+    <div className="author-container">
+      <div className="author-image-container">
+        <div className="author-image">
+          <PreviewCompatibleImage
+            imageInfo={{
+              image: thumb,
+              alt: `featured image thumbnail for post ${author}`,
+            }}
+          />
+        </div>
+      </div>
+      <div className="author-content">
+        <h1>{author}</h1>
+        <div dangerouslySetInnerHTML={{ __html: desc }} />
+      </div>
     </div>
   )
 }

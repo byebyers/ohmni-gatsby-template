@@ -1,1 +1,22 @@
-//test
+.author-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "image content";
+  margin: 0 0 1rem 0;
+}
+
+.author-content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1.5rem;
+  justify-content: center;
+}
+
+.author-image-container {
+  grid-area: image;
+}
+
+.author-image {
+  height: 100%;
+}
