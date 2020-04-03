@@ -85,10 +85,28 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
 
-// You can delete this file if you're not using it
+//Make Author Nodes
+exports.sourceNodes = ({ actions, getNodes, getNode }) => {
+  const { createNodeField } = actions
+
+  const markdownNodes = getNodes()
+    .filter(node => node.internal.type === `MarkdownRemark`)
+    .forEach(node => {
+      if (node.frontmatter.author) {
+        const authorNode = getNodes().find(
+          node2 =>
+            node2.internal.type === `MarkdownRemark` &&
+            node2.frontmatter.title === node.frontmatter.author
+        )
+
+        if (authorNode) {
+          createNodeField({
+            node,
+            name: `author`,
+            value: authorNode.id,
+          })
+        }
+      }
+    })
+}

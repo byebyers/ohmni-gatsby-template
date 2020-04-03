@@ -6,6 +6,7 @@ import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import PreviewCompatibleImage from '../components/preview-compatible-image'
 import Content, { HTMLContent } from '../components/content/content'
+import { kebabCase } from 'lodash'
 import TagSection from '../components/tag-section/tag-section'
 import './blog-post.scss'
 
@@ -15,6 +16,7 @@ export const BlogPostTemplate = ({
   description,
   featuredimage,
   author,
+  thumbnail,
   date,
   timeToRead,
   tags,
@@ -31,13 +33,20 @@ export const BlogPostTemplate = ({
         <p className="post-subheader">{description}</p>
         <div className="post-details">
           <div className="post-author-pic">
-            <Link to={`/`}>
-              <img alt="Vinc" src="https://miro.medium.com/fit/c/120/120/0*ghwPeU9symnr3jY-.jpg" />
+            <Link to={`/authors/authors-${kebabCase(author)}/`}>
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: thumbnail,
+                  alt: `featured image thumbnail for post ${title}`,
+                }}
+              />
             </Link>
           </div>
           <div className="post-detail-block">
             <div className="post-author">
-              {author}
+              <Link to={`/authors/authors-${kebabCase(author)}/`} className="text-black">
+                {author}
+              </Link>
             </div>
             <div className="post-fine-details">
               <span>{date} ·&nbsp;</span>
@@ -71,6 +80,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   featureimage: PropTypes.string,
   author: PropTypes.string,
+  thumbnail: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -86,6 +96,7 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
         featuredimage={post.frontmatter.featuredimage}
         author={post.frontmatter.author}
+        thumbnail={post.fields.author.frontmatter.thumbnail}
         date={post.frontmatter.date}
         timeToRead={post.timeToRead}
         helmet={
@@ -118,6 +129,19 @@ export const pageQuery = graphql`
       id
       html
       timeToRead
+      fields {
+        author {
+          frontmatter {
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

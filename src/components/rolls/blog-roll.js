@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { kebabCase } from 'lodash'
 import PreviewCompatibleImage from '../preview-compatible-image'
 import './rolls.scss'
 
@@ -34,7 +35,9 @@ class BlogRoll extends React.Component {
                   </Link>
                   <div>
                     <div className="roll-author">
-                      {post.frontmatter.author}
+                      <Link to={`/authors/authors-${kebabCase(post.frontmatter.author)}/`} className="text-black">
+                        {post.frontmatter.author}
+                      </Link>
                     </div>
                     <div className="roll-details">
                       <span>{post.frontmatter.date} ·&nbsp;</span>
