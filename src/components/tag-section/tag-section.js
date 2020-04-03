@@ -24,7 +24,7 @@ const TagSection = ({ tags }) => {
   )
 }
 
-TagSection.propTypes ={
+TagSection.propTypes = {
   tags: PropTypes.string,
 }
 

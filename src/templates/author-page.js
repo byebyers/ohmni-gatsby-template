@@ -1,22 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
-import PreviewCompatibleImage from '../components/preview-compatible-image'
+import AuthorSection from '../components/author-section/author-section'
 
 export default ({ data }) => {
   const author = data.markdownRemark
   return (
     <Layout>
-      <div>
-        <h1>{author.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: author.description }} />
-        <PreviewCompatibleImage
-          imageInfo={{
-            image: author.frontmatter.thumbnail,
-            alt: `featured image thumbnail for post ${author.frontmatter.title}`,
-          }}
-        />
-      </div>
+      <AuthorSection
+        author={author.frontmatter.title}
+        desc={author.frontmatter.description}
+        thumb={author.frontmatter.thumbnail}
+      />
     </Layout>
   )
 }
@@ -27,6 +22,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
