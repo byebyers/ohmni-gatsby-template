@@ -10,6 +10,7 @@ export const BlogPageTemplate = ({
   heading,
   subheading,
   banner,
+  postData,
 }) => {
 
   return (
@@ -20,7 +21,7 @@ export const BlogPageTemplate = ({
         banner={banner}
       />
       <Container>
-      <BlogRoll />
+      <BlogRoll data={postData}/>
       </Container>
     </div>
   )
@@ -33,7 +34,7 @@ BlogPageTemplate.propTypes = {
 }
 
 const BlogPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { blogPage: post } = data
 
   return (
     <Layout>
@@ -41,6 +42,7 @@ const BlogPage = ({ data }) => {
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
         banner={post.frontmatter.banner}
+        postData={data.blogPosts}
       />
     </Layout>
   )
@@ -54,7 +56,7 @@ export default BlogPage
 
 export const blogPageQuery = graphql`
   query BlogPageTemplate($id: String) {
-    markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "blog-page" } }) {
+    blogPage: markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "blog-page" } }) {
       html
       frontmatter {
         heading
@@ -63,6 +65,35 @@ export const blogPageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    blogPosts: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            title
+            templateKey
+            author
+            date(formatString: "MMMM DD, YYYY")
+            featuredpost
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
