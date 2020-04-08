@@ -87,8 +87,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-  const postDate = post.frontmatter.date
-  const stringDate = postDate.toString()
   console.log(post.frontmatter.featuredimage)
   return (
     <Layout>
@@ -99,7 +97,7 @@ const BlogPost = ({ data }) => {
         featuredimage={post.frontmatter.featuredimage}
         author={post.frontmatter.author}
         thumbnail={post.fields.author.frontmatter.thumbnail}
-        date={stringDate}
+        date={post.frontmatter.date}
         timeToRead={post.timeToRead}
         helmet={
           <Helmet titleTemplate="%s | Blog">

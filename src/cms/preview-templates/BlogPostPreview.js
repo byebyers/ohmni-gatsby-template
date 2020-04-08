@@ -6,7 +6,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
   const tags = entry.getIn(['data', 'tags'])
   console.log(data)
-  if (data) {
+  if (data && tags) {
     return (
       <BlogPostTemplate
         content={data.body}
