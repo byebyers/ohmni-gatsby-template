@@ -54,7 +54,7 @@ const BlogRoll = ({ data }) => {
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                        alt: `featured image for post ${post.frontmatter.title}`,
                       }}
                     />
                     </Link>

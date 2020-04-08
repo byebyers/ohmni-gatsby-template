@@ -37,7 +37,7 @@ export const BlogPostTemplate = ({
               <PreviewCompatibleImage
                 imageInfo={{
                   image: thumbnail,
-                  alt: `featured image thumbnail for post ${title}`,
+                  alt: `featured image for post ${title}`,
                 }}
               />
             </Link>
@@ -58,7 +58,7 @@ export const BlogPostTemplate = ({
           <PreviewCompatibleImage
             imageInfo={{
               image: featuredimage,
-              alt: `featured image thumbnail for post ${title}`,
+              alt: `featured image thumbnail for author ${title}`,
             }}
           />
           <div className="post-fine-details photo-details">

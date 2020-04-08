@@ -16,7 +16,7 @@ const AuthorSection = ({
           <PreviewCompatibleImage
             imageInfo={{
               image: thumb,
-              alt: `featured image thumbnail for post ${author}`,
+              alt: `featured image thumbnail for author ${author}`,
             }}
           />
         </div>
