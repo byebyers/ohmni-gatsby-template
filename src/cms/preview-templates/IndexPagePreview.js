@@ -11,6 +11,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         heading={data.heading}
         subheading={data.subheading}
         banner={data.banner}
+        onecolheadline={data.onecolheadline}
+        onecolcontent={data.onecolcontent}
       />
     )
   } else {

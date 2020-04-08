@@ -78,16 +78,18 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  featureimage: PropTypes.string,
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   author: PropTypes.string,
-  thumbnail: PropTypes.string,
+  thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
+  const postDate = post.frontmatter.date
+  const stringDate = postDate.toString()
+  console.log(post.frontmatter.featuredimage)
   return (
     <Layout>
       <BlogPostTemplate
@@ -97,7 +99,7 @@ const BlogPost = ({ data }) => {
         featuredimage={post.frontmatter.featuredimage}
         author={post.frontmatter.author}
         thumbnail={post.fields.author.frontmatter.thumbnail}
-        date={post.frontmatter.date}
+        date={stringDate}
         timeToRead={post.timeToRead}
         helmet={
           <Helmet titleTemplate="%s | Blog">

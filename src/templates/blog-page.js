@@ -20,9 +20,6 @@ export const BlogPageTemplate = ({
         subheading={subheading}
         banner={banner}
       />
-      <Container>
-      <BlogRoll data={postData}/>
-      </Container>
     </div>
   )
 }
@@ -42,8 +39,10 @@ const BlogPage = ({ data }) => {
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
         banner={post.frontmatter.banner}
-        postData={data.blogPosts}
       />
+      <Container>
+        <BlogRoll data={data.blogPosts}/>
+      </Container>
     </Layout>
   )
 }

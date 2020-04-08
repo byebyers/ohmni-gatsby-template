@@ -7,7 +7,7 @@ import Layout from '../layout/layout'
 import Container from '../container/container'
 import BlogRoll from '../rolls/blog-roll'
 
-const TagRoll = ({ pageContext, data }) => {
+const TagPage = ({ pageContext, data }) => {
     const { tag } = pageContext
     const { totalCount: tcount } = data.allMarkdownRemark
     const tagHeader = `${tcount} post${
@@ -25,7 +25,7 @@ const TagRoll = ({ pageContext, data }) => {
     )
 }
 
-TagRoll.propTypes = {
+TagPage.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
   }),
@@ -48,10 +48,10 @@ TagRoll.propTypes = {
   }),
 }
 
-export default TagRoll
+export default TagPage
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query TagPage($tag: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }

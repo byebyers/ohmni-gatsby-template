@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas: "content image";
+  margin: 0 0 2rem 0;
 }
 
 .roll-post-content {

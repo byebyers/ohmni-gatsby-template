@@ -13,8 +13,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "blogPost"
+    label: "Blog Post"
     label_singular: "Post"
     folder: "content/blog"
     create: true

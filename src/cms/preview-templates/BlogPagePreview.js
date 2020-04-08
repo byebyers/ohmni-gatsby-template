@@ -4,7 +4,6 @@ import { BlogPageTemplate } from '../../templates/blog-page'
 
 const BlogPagePreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
-
   if (data) {
     return (
       <BlogPageTemplate

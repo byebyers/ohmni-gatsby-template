@@ -5,6 +5,7 @@ import { kebabCase } from 'lodash'
 import './tag-section.scss'
 
 const TagSection = ({ tags }) => {
+  console.log(tags[0])
   return (
     <div>
       {tags && tags.length ? (
@@ -25,7 +26,7 @@ const TagSection = ({ tags }) => {
 }
 
 TagSection.propTypes = {
-  tags: PropTypes.string,
+  tags: PropTypes.array,
 }
 
 export default TagSection

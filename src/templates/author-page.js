@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+// Components
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import AuthorSection from '../components/author-section/author-section'
@@ -12,11 +14,13 @@ export const AuthorPageTemplate = ({
   thumbnail,
 }) => {
   return (
-    <AuthorSection
-      author={title}
-      desc={description}
-      thumb={thumbnail}
-    />
+    <div>
+      <AuthorSection
+        author={title}
+        desc={description}
+        thumb={thumbnail}
+      />
+    </div>
   )
 }
 
@@ -27,7 +31,7 @@ AuthorPageTemplate.propTypes = {
 }
 
 const AuthorPage = ({ data }) => {
-  const { authorPage: owner } = data
+  const { authorPage: owner} = data
   return (
     <Layout>
       <Container>
@@ -45,7 +49,7 @@ const AuthorPage = ({ data }) => {
 
 AuthorPage.propTypes = {
   pageContext: PropTypes.shape({
-    author: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }),
   data: PropTypes.object.isRequired,
 }
