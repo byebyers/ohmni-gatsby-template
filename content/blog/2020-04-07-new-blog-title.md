@@ -8,5 +8,6 @@ featuredpost: false
 featuredimage: /img/fiver1.jpg
 tags:
   - Group1
+photoCredit: John Bo
 ---
 Teaetdasgdsag ewqagdsa

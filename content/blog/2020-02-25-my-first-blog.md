@@ -9,5 +9,6 @@ featuredimage: /img/fiver4.jpg
 tags:
   - tag1
   - tag2
+photoCredit: John Bo
 ---
 Body Testdsafdasf adsf

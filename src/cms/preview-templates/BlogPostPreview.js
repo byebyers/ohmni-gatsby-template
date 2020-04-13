@@ -25,10 +25,22 @@ const BlogPostPreview = ({ entry, widgetFor, fieldsMetaData  }) => {
         date={postDate}
         tags={tags && tags.toJS()}
         title={data.title}
+        photoCredit={data.photoCredit}
       />
     )
   } else {
-    return <div>Loading...</div>
+    return (
+      <div
+        style={{
+          height: `100vh`,
+          width: `100%`,
+          display: `flex`,
+          alignItems: `center`,
+          justifyContent: `center`,
+        }}>
+        <h3>Please add an author and tags</h3>
+      </div>
+    )
   }
 }
 

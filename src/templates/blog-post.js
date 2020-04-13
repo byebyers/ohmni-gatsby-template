@@ -22,6 +22,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  photoCredit,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -62,7 +63,7 @@ export const BlogPostTemplate = ({
             }}
           />
           <div className="post-fine-details photo-details">
-            <span>Photo Credit placed here</span>
+            <span>Photo by: {photoCredit}</span>
           </div>
         </div>
         <div className="post-text">
@@ -110,6 +111,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        photoCredit={post.frontmatter.photoCredit}
       />
     </Layout>
   )
@@ -155,6 +157,7 @@ export const pageQuery = graphql`
         }
         author
         tags
+        photoCredit
       }
     }
   }
