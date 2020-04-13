@@ -1,21 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BlogPostTemplate } from '../../templates/blog-post'
+import moment from 'moment'
 
-const BlogPostPreview = ({ entry, widgetFor }) => {
+const BlogPostPreview = ({ entry, widgetFor, fieldsMetaData  }) => {
   const data = entry.getIn(['data']).toJS()
   const tags = entry.getIn(['data', 'tags'])
-  console.log(data)
-  if (data && tags) {
+  const postDate = moment(data.date).format('MMMM DD, YYYY')
+  const fields = fieldsMetaData.toJS()
+  console.log(fields)
+
+  if (data && tags  && fields.author) {
+    const authorObj = fields.author.authors
+    const postAuthor = data.author
+    const authorData = authorObj[postAuthor]
+    const authorThumb = authorData.thumbnail
     return (
       <BlogPostTemplate
         content={data.body}
         description={data.description}
         featuredimage={data.featuredimage}
-        author={data.author}
-        thumbnail={data.thumbnail}
-        timeToRead={data.timeToRead}
-        date={data.date.toString()}
+        author={postAuthor}
+        thumbnail={authorThumb}
+        date={postDate}
         tags={tags && tags.toJS()}
         title={data.title}
       />
