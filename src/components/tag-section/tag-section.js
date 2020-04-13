@@ -5,7 +5,6 @@ import { kebabCase } from 'lodash'
 import './tag-section.scss'
 
 const TagSection = ({ tags }) => {
-  console.log(tags[0])
   return (
     <div>
       {tags && tags.length ? (
