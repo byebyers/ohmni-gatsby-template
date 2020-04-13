@@ -10,7 +10,7 @@ const BlogPostPreview = ({ entry, widgetFor, fieldsMetaData  }) => {
   const fields = fieldsMetaData.toJS()
   console.log(fields)
 
-  if (data && tags  && fields.author) {
+  if (data && tags && fields.author) {
     const authorObj = fields.author.authors
     const postAuthor = data.author
     const authorData = authorObj[postAuthor]
