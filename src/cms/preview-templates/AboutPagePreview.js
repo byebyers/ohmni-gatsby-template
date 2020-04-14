@@ -4,7 +4,6 @@ import { AboutPageTemplate } from '../../templates/about-page'
 
 const AboutPagePreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
-  console.log(data)
   if (data) {
     return (
       <AboutPageTemplate

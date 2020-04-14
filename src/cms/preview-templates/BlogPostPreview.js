@@ -8,7 +8,6 @@ const BlogPostPreview = ({ entry, widgetFor, fieldsMetaData  }) => {
   const tags = entry.getIn(['data', 'tags'])
   const postDate = moment(data.date).format('MMMM DD, YYYY')
   const fields = fieldsMetaData.toJS()
-  console.log(fields)
 
   if (data && tags && fields.author) {
     const authorObj = fields.author.authors

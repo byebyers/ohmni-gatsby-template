@@ -4,7 +4,6 @@ import { AuthorPageTemplate } from '../../templates/author-page'
 
 const AuthorPagePreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
-  console.log(data)
   if (data) {
     return (
       <AuthorPageTemplate
