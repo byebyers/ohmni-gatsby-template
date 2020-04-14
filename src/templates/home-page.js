@@ -36,7 +36,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data
-  console.log(post.frontmatter.banner)
   return (
     <Layout>
       <SEO title="Home" />
