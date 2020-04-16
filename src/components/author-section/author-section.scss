@@ -1,7 +1,9 @@
 .author-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: "image content";
+  grid-template-areas:
+              "image content"
+              "social social";
   margin: 0 0 1rem 0;
 }
 
@@ -22,6 +24,7 @@
 }
 
 .socialMedia {
+  grid-area: social;
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 0 0 0;
