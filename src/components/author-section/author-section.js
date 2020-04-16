@@ -15,7 +15,6 @@ const AuthorSection = ({
   inWebsite,
   inMail,
 }) => {
-  console.log(facebook)
   return (
     <div className="author-container">
       <div className="author-image-container">
