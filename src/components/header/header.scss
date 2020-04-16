@@ -8,8 +8,14 @@
 .header-container {
   max-width: 50vw;
   padding: 1.45rem 1.0875rem;
+  justify-content: center;
 }
 
 .header-container > * {
   margin: 0;
+}
+
+.site-logo {
+  height: 2rem;
+  margin: 0 !important;
 }

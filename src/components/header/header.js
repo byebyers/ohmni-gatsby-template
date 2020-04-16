@@ -7,11 +7,14 @@ import Nav from "../navigation/nav"
 const Header = ({ siteTitle }) => (
   <header className="main-header">
     <div className="header-container">
-      <h1>
+      {/*<h1>
         <Link to="/" className="text-black">
           {siteTitle}
         </Link>
-      </h1>
+      </h1>*/}
+      <Link to="/" className="text-black">
+        <img src="/img/logo-title.svg" alt={siteTitle} className="site-logo"/>
+      </Link>
     </div>
     <Nav />
   </header>
