@@ -20,3 +20,21 @@
 .author-image {
   height: 100%;
 }
+
+.socialMedia {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0 0 0;
+}
+
+.socialItem a {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 1rem 0;
+}
+
+.socialItem img {
+  height: 1.2rem;
+  margin-bottom: 0 !important;
+  padding: 0 .5rem 0 0;
+}

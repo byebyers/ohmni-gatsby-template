@@ -10,6 +10,12 @@ const AuthorPagePreview = ({ entry, widgetFor }) => {
         title={data.title}
         description={data.description}
         thumbnail={data.thumbnail}
+        facebook={data.facebook}
+        instagram={data.instagram}
+        linkedin={data.linkedin}
+        twitter={data.twitter}
+        inWebsite={data.inWebsite}
+        inMail={data.inMail}
       />
     )
   } else {

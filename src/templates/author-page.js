@@ -12,6 +12,12 @@ export const AuthorPageTemplate = ({
   title,
   description,
   thumbnail,
+  facebook,
+  instagram,
+  linkedin,
+  twitter,
+  inWebsite,
+  inMail
 }) => {
   return (
     <div>
@@ -19,6 +25,12 @@ export const AuthorPageTemplate = ({
         author={title}
         desc={description}
         thumb={thumbnail}
+        facebook={facebook}
+        instagram={instagram}
+        linkedin={linkedin}
+        twitter={twitter}
+        inWebsite={inWebsite}
+        inMail={inMail}
       />
     </div>
   )
@@ -27,7 +39,13 @@ export const AuthorPageTemplate = ({
 AuthorPageTemplate.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  thumbnail: PropTypes.string,
+  thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  facebook: PropTypes.string,
+  instagram: PropTypes.string,
+  linkedin: PropTypes.string,
+  twitter: PropTypes.string,
+  inWebsite: PropTypes.string,
+  inMail: PropTypes.string,
 }
 
 const AuthorPage = ({ data }) => {
@@ -39,6 +57,12 @@ const AuthorPage = ({ data }) => {
           title={owner.frontmatter.title}
           description={owner.frontmatter.description}
           thumbnail={owner.frontmatter.thumbnail}
+          facebook={owner.frontmatter.facebook}
+          instagram={owner.frontmatter.instagram}
+          linkedin={owner.frontmatter.linkedin}
+          twitter={owner.frontmatter.twitter}
+          inWebsite={owner.frontmatter.inWebsite}
+          inMail={owner.frontmatter.inMail}
         />
         <hr />
         <BlogRoll data={data.authorPosts} />
@@ -51,7 +75,7 @@ AuthorPage.propTypes = {
   pageContext: PropTypes.shape({
     title: PropTypes.string.isRequired,
   }),
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
 }
 
 export default AuthorPage
@@ -62,6 +86,12 @@ export const query = graphql`
       html
       frontmatter {
         title
+        facebook
+        instagram
+        linkedin
+        twitter
+        inWebsite
+        inMail
         description
         thumbnail {
           childImageSharp {

@@ -43,6 +43,12 @@ collections:
       - {label: "Author Name", name: "title", widget: "string"}
       - {label: "Author Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
+      - {label: "Facebook Link", name: "facebook", widget: "string"}
+      - {label: "Instagram Link", name: "instagram", widget: "string"}
+      - {label: "Linkedin Link", name: "linkedin", widget: "string"}
+      - {label: "Twitter Link", name: "twitter", widget: "string"}
+      - {label: "Website Link", name: "inWebsite", widget: "string"}
+      - {label: "Email Link", name: "inMail", widget: "string"}
   - name: "events"
     label: "Events"
     label_singular: "Event"
