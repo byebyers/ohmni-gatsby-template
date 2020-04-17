@@ -5,6 +5,7 @@ import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import Halfban from '../components/banners/half-banner'
 import BlogRoll from '../components/rolls/blog-roll'
+import FeaturedPost from '../components/featured-post/featured-post'
 
 export const BlogPageTemplate = ({
   heading,
@@ -41,6 +42,9 @@ const BlogPage = ({ data }) => {
         banner={post.frontmatter.banner}
       />
       <Container>
+        <FeaturedPost data={data.blogPosts}/>
+        <h1>Latest</h1>
+        <hr />
         <BlogRoll data={data.blogPosts}/>
       </Container>
     </Layout>

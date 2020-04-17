@@ -1,6 +1,5 @@
 
 .site-layout {
-  padding: 1rem;
   //border: 5px solid red;
 }
 
@@ -22,7 +21,6 @@
   list-style: none;
   font-size: 0;
   margin-left: 0;
-  padding: 0 1rem;
   display: grid;
   grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 80vw) minmax(.5rem, 1fr);
 }
