@@ -14,7 +14,7 @@ publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 
-logo_url: https://your-site.com/images/logo-title.svg
+logo_url: https://ohmni-temp.netlify.app/img/logo-title.svg
 
 collections:
   - name: "blogPost"
