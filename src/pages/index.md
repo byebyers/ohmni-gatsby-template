@@ -1,8 +1,12 @@
 ---
 templateKey: home-page
 banner: /img/james-day-urmik_ustci-unsplash.jpg
-heading: About our values
-subheading: More about Values
+heading: >-
+  Aesthetics are undeniably pleasing. How can you become your most true
+  Kinfeshion self?  
+subheading: >-
+  View, read, and share… A fashion revolution is upon us, and there is much
+  creativity to be excited about!!!
 onecolheadline: Our Story
 onecolcontent: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
