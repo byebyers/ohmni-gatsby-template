@@ -1,1 +1,45 @@
 
+.site-layout {
+  padding: 1rem;
+  //border: 5px solid red;
+}
+
+
+.o-lines {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  opacity: .2;
+  pointer-events: none;
+}
+
+.o-layout {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  margin-left: 0;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 80vw) minmax(.5rem, 1fr);
+}
+
+.o-lines_line {
+  position: relative;
+  height: 100%;
+  border-right: 1px solid black;
+}
+
+.o-layout_item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+.o-first {
+  border-left: 1px solid black;
+}

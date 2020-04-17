@@ -24,8 +24,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <div className="site-layout">
       <Header siteTitle={data.site.siteMetadata.title} />
+      <div className="o-lines o-layout">
+        <div className="o-lines_line o-layout_item o-first"></div>
+        <div className="o-lines_line o-layout_item"></div>
+        <div className="o-lines_line o-layout_item"></div>
+      </div>
       {children}
       <footer>
         © {new Date().getFullYear()}, Built with
