@@ -1,7 +1,7 @@
 ---
 templateKey: blog-page
 path: /blog
-banner: /img/Screenshot_2019-11-12 Motion Graphics on Behance.jpg
+banner: /img/james-day-urmik_ustci-unsplash.jpg
 heading: Phoenix Fashion News
 subheading: Brought to you by Kinfeshion
 ---
