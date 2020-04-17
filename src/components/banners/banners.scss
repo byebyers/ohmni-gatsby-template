@@ -36,15 +36,12 @@
 
 .title-wrap > * {
   color: white;
-  width: 50vw;
+  width: 90vw;
 }
 
 @media only screen and (max-width: 84em) {
     .display-banner {
       background-attachment: scroll;
-    }
-    .title-wrap > * {
-      width: 90vw;
     }
 
 }
