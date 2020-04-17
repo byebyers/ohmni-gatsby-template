@@ -5,6 +5,8 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Fullban from "../components/banners/full-banner"
 import Onecol from "../components/columns/one-column"
+import Container from '../components/container/container'
+import BlogRoll from '../components/rolls/blog-roll'
 
 export const IndexPageTemplate = ({
   heading,
@@ -35,7 +37,7 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { homepage: post } = data
   return (
     <Layout>
       <SEO title="Home" />
@@ -46,6 +48,11 @@ const IndexPage = ({ data }) => {
         onecolheadline={post.frontmatter.onecolheadline}
         onecolcontent={post.frontmatter.onecolcontent}
       />
+      <Container>
+        <h1>Latest Stories</h1>
+        <hr />
+        <BlogRoll data={data.blogPosts}/>
+      </Container>
     </Layout>
   )
 }
@@ -58,7 +65,7 @@ export default IndexPage
 
 export const homePageQuery = graphql`
   query HomePageTemplate($id: String) {
-    markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "home-page" } }) {
+    homepage: markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "home-page" } }) {
       html
       frontmatter {
         heading
@@ -72,6 +79,35 @@ export const homePageQuery = graphql`
         }
         onecolheadline
         onecolcontent
+      }
+    }
+    blogPosts: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            title
+            templateKey
+            author
+            date(formatString: "MMMM DD, YYYY")
+            featuredpost
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
