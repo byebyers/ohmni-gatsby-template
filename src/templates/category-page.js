@@ -7,11 +7,13 @@ import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
 
-const CategoryPage = ({ data }) => {
+const CategoryPage = ({ pageContext, data }) => {
+  const { title } = pageContext
   const { allMarkdownRemark: owner} = data
   return (
     <Layout>
       <Container>
+        <h1>{title}</h1>
         <BlogRoll data={owner} />
       </Container>
     </Layout>
