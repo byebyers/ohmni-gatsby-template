@@ -2,6 +2,7 @@
 templateKey: blog-post
 tags:
   - Photography
+category: Fashion
 author: Jacob Byers
 title: Alai Ali and the Power of Seeing
 date: 2020-04-17T23:50:18.395Z

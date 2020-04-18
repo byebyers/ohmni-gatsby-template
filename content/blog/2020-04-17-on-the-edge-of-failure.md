@@ -2,12 +2,13 @@
 templateKey: blog-post
 tags:
   - Photography
+category: Fashion
 author: Jacob Byers
 title: On the Edge of Failure
 date: 2020-04-17T23:42:34.931Z
 description: >-
   Photographer Joe Pugliese energizes his renown professional practice with
-  hobbies that invite mistakes and outright failure. 
+  hobbies that invite mistakes and outright failure.
 featuredpost: true
 featuredimage: /img/1920x1080-joepug-st-04.jpg
 photoCredit: Adobe Create Magazine

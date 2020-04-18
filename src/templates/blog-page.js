@@ -89,6 +89,7 @@ export const blogPageQuery = graphql`
             title
             templateKey
             author
+            category
             date(formatString: "MMMM DD, YYYY")
             featuredpost
             featuredimage {

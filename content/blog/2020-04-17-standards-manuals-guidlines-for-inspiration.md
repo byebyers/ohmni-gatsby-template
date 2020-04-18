@@ -3,6 +3,7 @@ templateKey: blog-post
 tags:
   - Design
   - Inspiration
+category: Fashion
 author: Jacob Byers
 title: 'Standards Manuals: Guidlines for Inspiration'
 date: 2020-04-17T22:28:42.443Z

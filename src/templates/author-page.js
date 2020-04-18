@@ -119,6 +119,7 @@ export const query = graphql`
             title
             templateKey
             author
+            category
             date(formatString: "MMMM DD, YYYY")
             featuredimage {
               childImageSharp {

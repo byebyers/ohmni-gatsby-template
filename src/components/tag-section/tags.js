@@ -69,6 +69,7 @@ export const pageQuery = graphql`
             title
             templateKey
             author
+            category
             tags
             date(formatString: "MMMM DD, YYYY")
             featuredpost

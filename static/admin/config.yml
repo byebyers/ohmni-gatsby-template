@@ -26,6 +26,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: true}
       - {label: "Author", name: "author", widget: "relation", collection: "authors", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -45,12 +46,21 @@ collections:
       - {label: "Author Name", name: "title", widget: "string"}
       - {label: "Author Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
-      - {label: "Facebook Link", name: "facebook", widget: "string"}
-      - {label: "Instagram Link", name: "instagram", widget: "string"}
-      - {label: "Linkedin Link", name: "linkedin", widget: "string"}
-      - {label: "Twitter Link", name: "twitter", widget: "string"}
-      - {label: "Website Link", name: "inWebsite", widget: "string"}
-      - {label: "Email Link", name: "inMail", widget: "string"}
+      - {label: "Facebook Link", name: "facebook", widget: "string", required: false}
+      - {label: "Instagram Link", name: "instagram", widget: "string", required: false}
+      - {label: "Linkedin Link", name: "linkedin", widget: "string", required: false}
+      - {label: "Twitter Link", name: "twitter", widget: "string", required: false}
+      - {label: "Website Link", name: "inWebsite", widget: "string", required: false}
+      - {label: "Email Link", name: "inMail", widget: "string", required: false}
+  - name: "categories"
+    label: "Categories"
+    label_singular: "Category"
+    folder: "content/categories"
+    create: true
+    slug: "category-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "category-page"}
+      - {label: "Category Name", name: "title", widget: "string"}
   - name: "events"
     label: "Events"
     label_singular: "Event"

@@ -21,7 +21,9 @@ const FeaturedPost = ({ data }) => {
               }`}
             >
               <div className="featured-post-content">
-                <span className="featured-category">Category</span>
+                <Link to={`/categories/category-${kebabCase(post.frontmatter.category)}/`} className="text-black">
+                  <span className="roll-category">{post.frontmatter.category}</span>
+                </Link>
                 <Link
                   className="featured-title"
                   to={post.fields.slug}

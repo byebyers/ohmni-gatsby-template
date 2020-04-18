@@ -19,7 +19,9 @@ const BlogRoll = ({ data }) => {
               }`}
             >
               <div className="roll-post-content">
-                <span className="roll-category">Category</span>
+                <Link to={`/categories/category-${kebabCase(post.frontmatter.category)}/`} className="text-black">
+                  <span className="roll-category">{post.frontmatter.category}</span>
+                </Link>
                 <Link
                   className="roll-title"
                   to={post.fields.slug}

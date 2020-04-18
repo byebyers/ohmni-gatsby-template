@@ -2,6 +2,7 @@
 templateKey: blog-post
 tags:
   - Interviews
+category: Fashion
 author: Jacob Byers
 title: 'The WFH Mixtape: Michael Jeter'
 date: 2020-04-17T22:45:22.752Z
