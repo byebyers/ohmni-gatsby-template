@@ -1,5 +1,5 @@
 .main-header {
-  background-color: #fff;
+  background-color: transparent;
   display: flex;
   align-items: center;
   border-bottom: 1px solid grey;
@@ -7,7 +7,7 @@
 
 .header-container {
   max-width: 50vw;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 10%;
   justify-content: center;
 }
 
