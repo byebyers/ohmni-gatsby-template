@@ -10,7 +10,7 @@ import BlogRoll from '../rolls/blog-roll'
 const TagPage = ({ pageContext, data }) => {
     const { tag } = pageContext
     const { totalCount: tcount } = data.allMarkdownRemark
-    const tagHeader = `${tcount} post${
+    const tagHeader = `${tcount} article${
       tcount === 1 ? "" : "s"
     } tagged with ${tag}`
     return (

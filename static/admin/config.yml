@@ -18,9 +18,9 @@ logo_url: https://ohmni-temp.netlify.app/img/logo-title.svg
 
 collections:
   - name: "blogPost"
-    label: "Blog Post"
-    label_singular: "Post"
-    folder: "content/blog"
+    label: "News"
+    label_singular: "Article"
+    folder: "content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:

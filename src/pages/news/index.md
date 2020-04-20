@@ -1,4 +1,4 @@
 ---
 templateKey: blog-page
-path: /blog
+path: /news
 ---
