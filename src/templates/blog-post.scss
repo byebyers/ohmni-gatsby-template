@@ -30,10 +30,28 @@
 
 .post-details {
   display: grid;
-  grid-template-columns: 3.2rem 1fr;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
   margin: 0 0 3rem 0;
 }
+.post-info {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  align-items: center;
+}
+
+.post-share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.post-share-item img {
+  height: 1.2rem;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
 
 .post-author {
   font-size: .8rem;

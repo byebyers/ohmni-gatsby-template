@@ -8,6 +8,7 @@ import PreviewCompatibleImage from '../components/preview-compatible-image'
 import Content, { HTMLContent } from '../components/content/content'
 import { kebabCase } from 'lodash'
 import TagSection from '../components/tag-section/tag-section'
+import Share from '../components/share/share'
 import './blog-post.scss'
 
 export const BlogPostTemplate = ({
@@ -23,6 +24,8 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   photoCredit,
+  url,
+  slug,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -33,27 +36,38 @@ export const BlogPostTemplate = ({
         <h1 className="post-title">{title}</h1>
         <p className="post-subheader">{description}</p>
         <div className="post-details">
-          <div className="post-author-pic">
-            <Link to={`/authors/authors-${kebabCase(author)}/`}>
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: thumbnail,
-                  alt: `featured image for post ${title}`,
-                }}
-              />
-            </Link>
-          </div>
-          <div className="post-detail-block">
-            <div className="post-author">
-              <Link to={`/authors/authors-${kebabCase(author)}/`} className="text-black">
-                {author}
+          <div className="post-info">
+            <div className="post-author-pic">
+              <Link to={`/authors/authors-${kebabCase(author)}/`}>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: thumbnail,
+                    alt: `featured image for post ${title}`,
+                  }}
+                />
               </Link>
             </div>
-            <div className="post-fine-details">
-              <span>{date} ·&nbsp;</span>
-              <span>{timeToRead} min read</span>
+            <div className="post-detail-block">
+              <div className="post-author">
+                <Link to={`/authors/authors-${kebabCase(author)}/`} className="text-black">
+                  {author}
+                </Link>
+              </div>
+              <div className="post-fine-details">
+                <span>{date} ·&nbsp;</span>
+                <span>{timeToRead} min read</span>
+              </div>
             </div>
           </div>
+          <Share
+            socialConfig={{
+              config: {
+                url: `${url}${slug}`,
+                title,
+              },
+            }}
+            tags={tags}
+          />
         </div>
         <div className="post-image">
           <PreviewCompatibleImage
@@ -87,7 +101,7 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { blogposts: post } = data
   return (
     <Layout>
       <BlogPostTemplate
@@ -126,7 +140,15 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    blogsite: site {
+      siteMetadata {
+        siteUrl
+        social {
+          twitter
+        }
+      }
+    }
+    blogposts: markdownRemark(id: { eq: $id }) {
       id
       html
       timeToRead
@@ -142,6 +164,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        slug
       }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

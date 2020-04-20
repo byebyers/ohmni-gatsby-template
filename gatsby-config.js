@@ -1,18 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: `Ohmni`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    siteUrl: 'https://example.com',
-    image: 'https://lengstorf.com/images/jason-lengstorf.jpg',
-    author: `@gatsbyjs`,
+    description: `Template for Ohmni Projects`,
+    siteUrl: 'https://ohmni-temp.netlify.app',
+    image: 'https://ohmni-temp.netlify.app/img/logo-title.svg',
+    author: `@byersjacob`,
     organization: {
-      name: 'Example, Inc.',
-      url: 'https://example.com',
-      logo: 'https://lengstorf.com/android-chrome-512x512.png',
+      name: 'Ohmni',
+      url: 'https://ohmni-temp.netlify.app',
+      logo: 'https://ohmni-temp.netlify.app/img/logo-title.svg',
     },
     social: {
-      twitter: '@jlengstorf',
-      fbAppID: '',
+      twitter: '@ohmnitec',
+      fbAppID: '513264866034794',
     },
   },
   plugins: [

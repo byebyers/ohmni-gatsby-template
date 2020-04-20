@@ -1,0 +1,16 @@
+.article-share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.article-title {
+	margin: 0 1rem .5rem 0 !important;
+}
+
+.icon img {
+  height: 1.2rem;
+  margin-bottom: 0 !important;
+  padding: 0 .5rem 0 0;
+}
