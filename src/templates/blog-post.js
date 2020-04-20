@@ -125,6 +125,8 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         photoCredit={post.frontmatter.photoCredit}
+        url={data.blogsite.siteMetadata.siteUrl}
+        slug={post.fields.slug}
       />
     </Layout>
   )

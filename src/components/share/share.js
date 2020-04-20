@@ -31,7 +31,6 @@ const Share = ({ socialConfig, tags }) => (
 
 Share.propTypes = {
 	socialConfig: PropTypes.shape({
-		twitterHandle: PropTypes.string.isRequired,
 		config: PropTypes.shape({
 			url: PropTypes.string.isRequired,
 			title: PropTypes.string.isRequired,
