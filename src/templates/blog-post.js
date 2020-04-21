@@ -171,7 +171,7 @@ export const pageQuery = graphql`
           frontmatter {
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
+                fluid(maxWidth: 252, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
