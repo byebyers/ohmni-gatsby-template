@@ -12,6 +12,11 @@ description: >-
 featuredpost: false
 featuredimage: /img/1920x1080-alia-ali.jpg
 photoCredit: Adobe Create Magazine
+gallery:
+  image1: /img/olivier-guillard-pb9uuryyxsi-unsplash.jpg
+  image2: /img/susan-yin-yqhhlcs9hto-unsplash.jpg
+  image3: /img/marina-mazur-qc1jcyeoov8-unsplash.jpg
+  image4: /img/clark-van-der-beken-zfnpyaar0ag-unsplash.jpg
 ---
 Imagine having traveled to sixty-seven countries, resided in seven, and speaking five languages. Imagine growing up in a multicultural household with two linguist parents. Imagine, in mid-September 2001, being a Yemeni-Bosnian-American child, told that you could no longer speak your language. Imagine [Alia Ali](http://alia-ali.com).
 
