@@ -104,14 +104,13 @@ const BlogPost = ({ data }) => {
   const { blogposts: post } = data
   const siteURL = data.blogsite.siteMetadata.siteUrl
   const imgPath = post.frontmatter.featuredimage.childImageSharp.fluid.src
-  const siteImage = siteURL + imgPath
   return (
     <Layout>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        featuredimage={imgPath}
+        featuredimage={post.frontmatter.featuredimage}
         author={post.frontmatter.author}
         thumbnail={post.fields.author.frontmatter.thumbnail}
         date={post.frontmatter.date}
@@ -122,14 +121,14 @@ const BlogPost = ({ data }) => {
             <meta
               name="description"
               content={`${post.frontmatter.description}`}
-              image={`${siteImage}`}
+              image={`${imgPath}`}
             />
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         photoCredit={post.frontmatter.photoCredit}
-        url={post.frontmatter.featuredimage}
+        url={data.blogsite.siteMetadata.siteUrl}
         slug={post.fields.slug}
       />
     </Layout>

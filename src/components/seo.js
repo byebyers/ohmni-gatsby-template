@@ -52,6 +52,7 @@ function SEO({ description, lang, meta, title, image }) {
       <meta content={image} name="og:image" />
       <meta content="twitter:card" name="summary" />
       <meta content={title} name="twitter:title" />
+      <meta content={image} name="twitter:image" />
       <meta content={metaDescription} name="twitter:description" />
     </Helmet>
   )
