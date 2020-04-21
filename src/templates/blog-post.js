@@ -102,7 +102,9 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { blogposts: post } = data
+  const siteUrl = data.blogsite.siteMetadata.siteUrl
   const imgPath = post.frontmatter.featuredimage.childImageSharp.fluid.src
+  const siteImg = siteUrl + imgpath
   return (
     <Layout>
       <BlogPostTemplate
@@ -121,16 +123,16 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
               property="og:image"
-              content={`${imgPath}`}
+              content={`${siteImg}`}
               name="twitter:image"
-              content={`${imgPath}`}
+              content={`${siteImg}`}
             />
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         photoCredit={post.frontmatter.photoCredit}
-        url={data.blogsite.siteMetadata.siteUrl}
+        url={siteUrl}
         slug={post.fields.slug}
       />
     </Layout>
