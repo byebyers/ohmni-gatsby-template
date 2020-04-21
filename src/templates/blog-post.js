@@ -103,7 +103,7 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { blogposts: post } = data
   const siteUrl = data.blogsite.siteMetadata.siteUrl
-  const imgPath = post.frontmatter.featuredimage.childImageSharp.fluid.src
+  const imgPath = post.frontmatter.featuredimage.childImageSharp.fluid.originalImg
   const siteImg = siteUrl + imgPath
   console.log(siteImg)
   return (
@@ -171,7 +171,7 @@ export const pageQuery = graphql`
           frontmatter {
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 252, quality: 100) {
+                fluid(maxWidth: 120, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -188,6 +188,7 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 120, quality: 100) {
               ...GatsbyImageSharpFluid
+              originalImg
             }
           }
         }
