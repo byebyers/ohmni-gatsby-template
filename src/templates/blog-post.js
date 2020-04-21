@@ -105,6 +105,7 @@ const BlogPost = ({ data }) => {
   const siteUrl = data.blogsite.siteMetadata.siteUrl
   const imgPath = post.frontmatter.featuredimage.childImageSharp.fluid.src
   const siteImg = siteUrl + imgPath
+  console.log(siteImg)
   return (
     <Layout>
       <BlogPostTemplate
