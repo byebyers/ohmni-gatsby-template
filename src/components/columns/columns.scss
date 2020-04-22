@@ -1,7 +1,8 @@
 .oh-col {
   display: grid;
   grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 50vw) minmax(.5rem, 1fr);
-  padding: 5rem 0
+  padding: 10rem 0;
+  border-bottom: 1px solid black;
 }
 
 .one-col-div {

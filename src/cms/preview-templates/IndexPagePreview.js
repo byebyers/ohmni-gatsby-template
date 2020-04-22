@@ -13,6 +13,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         banner={data.banner}
         onecolheadline={data.onecolheadline}
         onecolcontent={data.onecolcontent}
+        aboutfeature={data.aboutfeature}
+        featureimage={data.featureimage}
       />
     )
   } else {

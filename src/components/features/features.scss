@@ -1,0 +1,34 @@
+.oh-feature {
+  display: grid;
+  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 80vw) minmax(.5rem, 1fr);
+  padding: 10rem 0;
+  border-bottom: 1px solid black;
+}
+
+.feature-container {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.left-feature {
+  grid-template-areas: "image content";
+}
+
+.right-feature {
+  grid-template-areas: "content image";
+}
+
+.feature-image-container {
+  grid-area: image;
+}
+
+.feature-content {
+  grid-area: content;
+}
+
+.feature-content h1 {
+  text-transform: capitalize;
+}

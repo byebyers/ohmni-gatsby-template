@@ -91,6 +91,12 @@ collections:
           - {label: "Subheading", name: "subheading", widget: "markdown"}
           - {label: "OneColHeadline", name: "onecolheadline", widget: "string"}
           - {label: "OneColContent", name: "onecolcontent", widget: "markdown"}
+          - label: "About Page Feature"
+            name: "aboutFeature"
+            widget: "object"
+            fields:
+              - {label: "Content", name: "aboutFeatureContent", widget: "markdown"}
+              - {label: "Image", name: "featuredImage", widget: "image"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

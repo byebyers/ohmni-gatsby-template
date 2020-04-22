@@ -5,6 +5,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Fullban from "../components/banners/full-banner"
 import Onecol from "../components/columns/one-column"
+import Feature from "../components/features/features"
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
 
@@ -14,6 +15,9 @@ export const IndexPageTemplate = ({
   banner,
   onecolheadline,
   onecolcontent,
+  aboutfeature,
+  featureimage,
+  sitename,
 }) => (
   <div>
     <Fullban
@@ -24,6 +28,12 @@ export const IndexPageTemplate = ({
     <Onecol
       onecolheadline={onecolheadline}
       onecolcontent={onecolcontent}
+    />
+    <Feature
+      image={featureimage}
+      site={sitename}
+      content={aboutfeature}
+      direction={'left'}
     />
   </div>
 )
@@ -47,6 +57,9 @@ const IndexPage = ({ data }) => {
         banner={post.frontmatter.banner}
         onecolheadline={post.frontmatter.onecolheadline}
         onecolcontent={post.frontmatter.onecolcontent}
+        aboutfeature={post.frontmatter.aboutFeature.aboutFeatureContent}
+        featureimage={post.frontmatter.aboutFeature.image}
+        sitename={data.website.siteMetadata.title}
       />
       <Container>
         <h1>Latest Stories</h1>
@@ -65,6 +78,11 @@ export default IndexPage
 
 export const homePageQuery = graphql`
   query HomePageTemplate($id: String) {
+    website: site {
+      siteMetadata {
+        title
+      }
+    }
     homepage: markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "home-page" } }) {
       html
       frontmatter {
@@ -79,11 +97,22 @@ export const homePageQuery = graphql`
         }
         onecolheadline
         onecolcontent
+        aboutFeature {
+          aboutFeatureContent
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
     blogPosts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      limit: 3
     ) {
       edges {
         node {

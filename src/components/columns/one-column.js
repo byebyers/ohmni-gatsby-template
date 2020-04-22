@@ -7,7 +7,7 @@ const Onecol = ({ onecolheadline, onecolcontent }) => {
   return (
     <section class="oh-col">
       <div class="one-col-div">
-            <h3>{onecolheadline}</h3>
+            <h1>{onecolheadline}</h1>
             <p>{onecolcontent}</p>
       </div>
     </section>

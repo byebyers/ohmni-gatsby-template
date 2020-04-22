@@ -5,7 +5,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Ohmni`,
+    title: `Kinfeshion`,
     description: `Template for Ohmni Projects`,
     siteUrl: 'https://ohmni-temp.netlify.app',
     image: 'https://ohmni-temp.netlify.app/img/logo-title.svg',
