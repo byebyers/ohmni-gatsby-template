@@ -19,4 +19,5 @@ aboutFeature:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. In vitae turpis massa
     sed elementum tempus egestas sed.
+  image: /img/susan-yin-yqhhlcs9hto-unsplash.jpg
 ---
