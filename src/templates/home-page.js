@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
   onecolcontent,
   aboutfeature,
   featureimage,
-  sitename,
+  featureheading,
   facebook,
 }) => (
   <div>
@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
     />
     <Feature
       image={featureimage}
-      site={sitename}
+      heading={featureheading}
       content={aboutfeature}
       direction={'left'}
     />
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
         onecolcontent={post.frontmatter.onecolcontent}
         aboutfeature={post.frontmatter.aboutFeature.aboutFeatureContent}
         featureimage={post.frontmatter.aboutFeature.featuredImage}
-        sitename={data.website.siteMetadata.title}
+        featureheading={post.frontmatter.aboutFeature.heading}
       />
       <Container>
         <h1>Latest Stories</h1>
@@ -110,6 +110,7 @@ export const homePageQuery = graphql`
         onecolheadline
         onecolcontent
         aboutFeature {
+          heading
           aboutFeatureContent
           featuredImage {
             childImageSharp {

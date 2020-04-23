@@ -1,4 +1,4 @@
 ---
-templateKey: blog-page
+templateKey: news-page
 path: /news
 ---

@@ -5,7 +5,7 @@ import PreviewCompatibleImage from '../preview-compatible-image'
 import './features.scss'
 
 
-const Feature = ({ image, site, content, direction }) => {
+const Feature = ({ image, heading, content, direction }) => {
   return (
     <div className="oh-feature">
       <section className={`feature-container ${direction}-feature`}>
@@ -20,7 +20,7 @@ const Feature = ({ image, site, content, direction }) => {
           </div>
         </div>
         <div className="feature-content">
-          <h1>About {site}</h1>
+          <h1>{heading}</h1>
           <p>{content}</p>
           <Link
             className="text-black"
