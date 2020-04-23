@@ -20,4 +20,5 @@ aboutFeature:
     tempor incididunt ut labore et dolore magna aliqua. In vitae turpis massa
     sed elementum tempus egestas sed.
   featuredImage: /img/susan-yin-yqhhlcs9hto-unsplash.jpg
+  heading: Your Mom
 ---
