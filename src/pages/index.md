@@ -21,4 +21,5 @@ aboutFeature:
     sed elementum tempus egestas sed.
   featuredImage: /img/susan-yin-yqhhlcs9hto-unsplash.jpg
   heading: About Kinfeshion
+  page: news-page
 ---
