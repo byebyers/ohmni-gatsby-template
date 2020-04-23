@@ -78,6 +78,16 @@ collections:
       - {label: "End", name: "end-date", widget: "datetime"}
       - {label: "Event Thumbnail", name: "thumbnail", widget: image}
       - {label: "About", name: "description", widget: "text"}
+  - name: "partners"
+    label: "Partners"
+    label_singular: "Partner"
+    folder: "content/partners"
+    create: true
+    slug: "partners-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-page"}
+      - {label: "Partner Name", name: "title", widget: "string"}
+      - {label: "Partner Thumbnail", name: "thumbnail", widget: image}
   - name: "pages"
     label: "Pages"
     files:

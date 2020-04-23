@@ -9,6 +9,7 @@ import Feature from "../components/features/features"
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
 import Social from '../components/social/social'
+import Partners from '../components/partners/partners'
 
 export const IndexPageTemplate = ({
   heading,
@@ -73,6 +74,9 @@ const IndexPage = ({ data }) => {
         instagram={data.webSocial.frontmatter.instagram}
         linkedin={data.webSocial.frontmatter.linkedin}
         twitter={data.webSocial.frontmatter.twitter}
+      />
+      <Partners
+        data={data.webPartner}
       />
     </Layout>
   )
@@ -156,6 +160,25 @@ export const homePageQuery = graphql`
         instagram
         linkedin
         twitter
+      }
+    }
+    webPartner: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "partner-page" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
