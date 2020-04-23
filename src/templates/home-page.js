@@ -21,6 +21,7 @@ export const IndexPageTemplate = ({
   featureimage,
   featureheading,
   facebook,
+  featurelink,
 }) => (
   <div>
     <Fullban
@@ -37,6 +38,7 @@ export const IndexPageTemplate = ({
       heading={featureheading}
       content={aboutfeature}
       direction={'left'}
+      link={featurelink}
     />
   </div>
 )
@@ -63,6 +65,7 @@ const IndexPage = ({ data }) => {
         aboutfeature={post.frontmatter.aboutFeature.aboutFeatureContent}
         featureimage={post.frontmatter.aboutFeature.featuredImage}
         featureheading={post.frontmatter.aboutFeature.heading}
+        featurelink={post.frontmatter.aboutFeature.page}
       />
       <Container>
         <h1>Latest Stories</h1>
@@ -112,6 +115,7 @@ export const homePageQuery = graphql`
         aboutFeature {
           heading
           aboutFeatureContent
+          page
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
