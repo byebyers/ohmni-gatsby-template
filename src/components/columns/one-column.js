@@ -5,8 +5,8 @@ import './columns.scss'
 
 const Onecol = ({ onecolheadline, onecolcontent }) => {
   return (
-    <section class="oh-col">
-      <div class="one-col-div">
+    <section className="oh-col">
+      <div className="one-col-div">
             <h1>{onecolheadline}</h1>
             <p>{onecolcontent}</p>
       </div>

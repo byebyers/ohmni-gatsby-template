@@ -8,6 +8,7 @@ import Onecol from "../components/columns/one-column"
 import Feature from "../components/features/features"
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
+import Social from '../components/social/social'
 
 export const IndexPageTemplate = ({
   heading,
@@ -18,6 +19,7 @@ export const IndexPageTemplate = ({
   aboutfeature,
   featureimage,
   sitename,
+  facebook,
 }) => (
   <div>
     <Fullban
@@ -58,7 +60,7 @@ const IndexPage = ({ data }) => {
         onecolheadline={post.frontmatter.onecolheadline}
         onecolcontent={post.frontmatter.onecolcontent}
         aboutfeature={post.frontmatter.aboutFeature.aboutFeatureContent}
-        featureimage={post.frontmatter.aboutFeature.image}
+        featureimage={post.frontmatter.aboutFeature.featuredImage}
         sitename={data.website.siteMetadata.title}
       />
       <Container>
@@ -66,6 +68,12 @@ const IndexPage = ({ data }) => {
         <hr />
         <BlogRoll data={data.blogPosts}/>
       </Container>
+      <Social
+        facebook={data.webSocial.frontmatter.facebook}
+        instagram={data.webSocial.frontmatter.instagram}
+        linkedin={data.webSocial.frontmatter.linkedin}
+        twitter={data.webSocial.frontmatter.twitter}
+      />
     </Layout>
   )
 }
@@ -99,7 +107,7 @@ export const homePageQuery = graphql`
         onecolcontent
         aboutFeature {
           aboutFeatureContent
-          image {
+          featuredImage {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -137,6 +145,17 @@ export const homePageQuery = graphql`
             }
           }
         }
+      }
+    }
+    webSocial: markdownRemark(
+      frontmatter: { templateKey: { eq: "info-page" } }
+    ) {
+      id
+      frontmatter {
+        facebook
+        instagram
+        linkedin
+        twitter
       }
     }
   }

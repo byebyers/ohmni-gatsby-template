@@ -8,8 +8,8 @@ import './features.scss'
 const Feature = ({ image, site, content, direction }) => {
   return (
     <div className="oh-feature">
-      <section class={`feature-container ${direction}-feature`}>
-        <div class="feature-image-container">
+      <section className={`feature-container ${direction}-feature`}>
+        <div className="feature-image-container">
           <div className="feature-image">
             <PreviewCompatibleImage
               imageInfo={{
@@ -19,7 +19,7 @@ const Feature = ({ image, site, content, direction }) => {
             />
           </div>
         </div>
-        <div class="feature-content">
+        <div className="feature-content">
           <h1>About {site}</h1>
           <p>{content}</p>
           <Link

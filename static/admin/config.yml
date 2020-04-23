@@ -106,3 +106,15 @@ collections:
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Subheading", name: "subheading", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: "information"
+    label: "Information"
+    files:
+      - file: "content/information/social.md"
+        label: "Social"
+        name: "social"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "info-page"}
+          - {label: "Facebook Link", name: "facebook", widget: "string", required: false}
+          - {label: "Instagram Link", name: "instagram", widget: "string", required: false}
+          - {label: "Linkedin Link", name: "linkedin", widget: "string", required: false}
+          - {label: "Twitter Link", name: "twitter", widget: "string", required: false}
