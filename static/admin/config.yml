@@ -96,17 +96,7 @@ collections:
     slug: "team-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
-      - {label: "Member Name", name: "name", widget: "string"}
-      - {label: "Member Title", name: "title", widget: "string"}
-      - {label: "Member Thumbnail", name: "thumbnail", widget: image}
-  - name: "team"
-    label: "Team"
-    label_singular: "Member"
-    folder: "content/team"
-    create: true
-    slug: "team-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
+      - {label: "Sub Key", name: "subKey", widget: "hidden", default: "team-member"}
       - {label: "Member Name", name: "name", widget: "string"}
       - {label: "Member Title", name: "title", widget: "string"}
       - {label: "Member Thumbnail", name: "thumbnail", widget: image}
@@ -118,6 +108,7 @@ collections:
     slug: "advisor-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
+      - {label: "Sub Key", name: "subKey", widget: "hidden", default: "advisor-member"}
       - {label: "Member Name", name: "title", widget: "string"}
       - {label: "Member Title", name: "position", widget: "string"}
   - name: "pages"
