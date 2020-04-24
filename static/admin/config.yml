@@ -88,6 +88,38 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-page"}
       - {label: "Partner Name", name: "title", widget: "string"}
       - {label: "Partner Thumbnail", name: "thumbnail", widget: image}
+  - name: "team"
+    label: "Team"
+    label_singular: "Member"
+    folder: "content/team"
+    create: true
+    slug: "team-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
+      - {label: "Member Name", name: "name", widget: "string"}
+      - {label: "Member Title", name: "title", widget: "string"}
+      - {label: "Member Thumbnail", name: "thumbnail", widget: image}
+  - name: "team"
+    label: "Team"
+    label_singular: "Member"
+    folder: "content/team"
+    create: true
+    slug: "team-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
+      - {label: "Member Name", name: "name", widget: "string"}
+      - {label: "Member Title", name: "title", widget: "string"}
+      - {label: "Member Thumbnail", name: "thumbnail", widget: image}
+  - name: "advisory-board"
+    label: "Advisory Board"
+    label_singular: "Member"
+    folder: "content/advisory-board"
+    create: true
+    slug: "advisor-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
+      - {label: "Member Name", name: "title", widget: "string"}
+      - {label: "Member Title", name: "position", widget: "string"}
   - name: "pages"
     label: "Pages"
     files:
