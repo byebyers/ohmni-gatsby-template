@@ -150,6 +150,22 @@ collections:
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Subheading", name: "subheading", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Team Page Feature"
+            name: "aboutTeam"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Link to another page?", name: "page", widget: "relation", collection: "pages", searchFields: ["templateKey"], valueField: "templateKey", displayFields: ["templateKey"], required: false}
+              - {label: "Content", name: "aboutFeatureContent", widget: "markdown"}
+              - {label: "Image", name: "featuredImage", widget: "image"}
+          - label: "News Page Feature"
+            name: "aboutNews"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Link to another page?", name: "page", widget: "relation", collection: "pages", searchFields: ["templateKey"], valueField: "templateKey", displayFields: ["templateKey"], required: false}
+              - {label: "Content", name: "aboutFeatureContent", widget: "markdown"}
+              - {label: "Image", name: "featuredImage", widget: "image"}
       - file: "src/pages/news/index.md"
         label: "News"
         name: "news"

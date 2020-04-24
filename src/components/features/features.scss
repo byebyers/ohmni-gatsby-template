@@ -17,8 +17,16 @@
   grid-template-areas: "image content";
 }
 
+.left-feature > .feature-content {
+  padding: 0 1rem 0 0;
+}
+
 .right-feature {
   grid-template-areas: "content image";
+}
+
+.right-feature > .feature-content {
+  padding: 0 0 0 1rem;
 }
 
 .feature-image-container {

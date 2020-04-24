@@ -6,37 +6,59 @@ import './features.scss'
 
 
 const Feature = ({ image, heading, content, direction, link }) => {
-  const pagelink = link
-  const pageinfo = pagelink.split("-")
-  const pagename = pageinfo[0]
-  return (
-    <div className="oh-feature">
-      <section className={`feature-container ${direction}-feature`}>
-        <div className="feature-image-container">
-          <div className="feature-image">
-            <PreviewCompatibleImage
-              imageInfo={{
-                image: image,
-                alt: `featured image for About page`,
-              }}
-            />
+
+  if (link) {
+    const pagelink = link
+    const pageinfo = pagelink.split("-")
+    const pagename = pageinfo[0]
+    return (
+      <div className="oh-feature">
+        <section className={`feature-container ${direction}-feature`}>
+          <div className="feature-image-container">
+            <div className="feature-image">
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: image,
+                  alt: `featured image for About page`,
+                }}
+              />
+            </div>
           </div>
-        </div>
-        <div className="feature-content">
-          <h1>{heading}</h1>
-          <p>{content}</p>
-          {link ? (
+          <div className="feature-content">
+            <h1>{heading}</h1>
+            <p>{content}</p>
             <Link
               className="text-black"
               to={`/${pagename}/`}
             >
               <p>Read More</p>
             </Link>
-          ) : null}
-        </div>
-      </section>
-    </div>
-  )
+          </div>
+        </section>
+      </div>
+    )
+  } else {
+    return (
+      <div className="oh-feature">
+        <section className={`feature-container ${direction}-feature`}>
+          <div className="feature-image-container">
+            <div className="feature-image">
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: image,
+                  alt: `featured image for About page`,
+                }}
+              />
+            </div>
+          </div>
+          <div className="feature-content">
+            <h1>{heading}</h1>
+            <p>{content}</p>
+          </div>
+        </section>
+      </div>
+    )
+  }
 }
 
 Feature.propTypes = {

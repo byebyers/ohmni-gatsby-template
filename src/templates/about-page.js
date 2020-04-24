@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import Halfban from "../components/banners/half-banner"
+import Feature from "../components/features/features"
 import Content, { HTMLContent } from '../components/content/content'
 
 export const AboutPageTemplate = ({
@@ -14,6 +15,13 @@ export const AboutPageTemplate = ({
   banner,
   content,
   contentComponent,
+  anewsheading,
+  anewscontent,
+  anewspage,
+  anewsthumb,
+  ateamheading,
+  ateamcontent,
+  ateamthumb,
 }) => {
   const PageContent = contentComponent || Content
 
@@ -27,6 +35,19 @@ export const AboutPageTemplate = ({
       <Container>
           <PageContent className="content" content={content} />
       </Container>
+      <Feature
+        image={anewsthumb}
+        heading={anewsheading}
+        content={anewscontent}
+        direction={'left'}
+        link={anewspage}
+      />
+      <Feature
+        image={ateamthumb}
+        heading={ateamheading}
+        content={ateamcontent}
+        direction={'right'}
+      />
     </div>
   )
 }
@@ -50,6 +71,13 @@ const AboutPage = ({ data }) => {
         subheading={post.frontmatter.subheading}
         banner={post.frontmatter.banner}
         content={post.html}
+        anewsheading={post.frontmatter.aboutNews.heading}
+        anewscontent={post.frontmatter.aboutNews.aboutFeatureContent}
+        anewspage={post.frontmatter.aboutNews.page}
+        anewsthumb={post.frontmatter.aboutNews.featuredImage}
+        ateamheading={post.frontmatter.aboutTeam.heading}
+        ateamcontent={post.frontmatter.aboutTeam.aboutFeatureContent}
+        ateamthumb={post.frontmatter.aboutTeam.featuredImage}
       />
     </Layout>
   )
@@ -72,6 +100,29 @@ export const aboutPageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        aboutNews{
+          aboutFeatureContent
+          heading
+          page
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        aboutTeam {
+          aboutFeatureContent
+          heading
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
