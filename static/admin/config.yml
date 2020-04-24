@@ -171,6 +171,12 @@ collections:
         name: "news"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-page"}
+      - file: "src/pages/team/index.md"
+        label: "Team"
+        name: "team"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "information"
     label: "Information"
     files:
