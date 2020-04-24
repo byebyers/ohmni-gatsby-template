@@ -56,7 +56,7 @@ export const teamPageQuery = graphql`
       html
     }
     teamMembers: allMarkdownRemark(
-      filter: {frontmatter: {templateKey: {eq: "team-page"}}}
+      filter: {frontmatter: {templateKey: {eq: "team-page"}, subKey: {eq: "team-member"}}}
     ) {
       edges {
         node {
