@@ -28,6 +28,6 @@ aboutNews:
     blue, light turquoise, lots of pink.
   featuredImage: /img/branden-harvey-wyn0qfdixw0-unsplash.jpg
 ---
-### Shade-grown coffee
+I think the idea of mixing luxury and mass-market fashion is very modern, very now - no one wears head-to-toe designer anymore.
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### \-Alexander McQueen
