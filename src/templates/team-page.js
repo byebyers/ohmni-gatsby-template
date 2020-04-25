@@ -72,7 +72,7 @@ export const teamPageQuery = graphql`
           id
           frontmatter {
             title
-            name
+            position
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
@@ -92,7 +92,7 @@ export const teamPageQuery = graphql`
           id
           frontmatter {
             title
-            name
+            position
           }
         }
       }
