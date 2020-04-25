@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../preview-compatible-image'
 import './team.scss'
 
-const Team = ({ data, header }) => {
+const Team = ({ data, header, number }) => {
   const { edges: members } = data
   return (
     <section className="member-section">
-      <h1>{header}</h1>
-      <div className="member-container">
+      <h1 className="member-title">{header}</h1>
+      <hr />
+      <div className={`member-container ${number}-column`}>
       {members &&
         members.map(({node: member}) => (
           <div>
@@ -22,9 +23,9 @@ const Team = ({ data, header }) => {
                 />
               </div>
             ) : ''}
-            <div className="team-content">
-              <h3>{member.frontmatter.name}</h3>
-              <p>{member.frontmatter.title}</p>
+            <div className={`team-content ${member.frontmatter.thumbnail ? '' : 'center-content'}`}>
+              <h3>{member.frontmatter.title}</h3>
+              <p>{member.frontmatter.position}</p>
             </div>
           </div>
         ))}

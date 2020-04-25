@@ -4,8 +4,21 @@
 
 .member-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1rem;
+  margin: 4rem 0 0 0;
+}
+
+.three-column {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.two-column {
+  grid-template-columns: 1fr 1fr;
+}
+
+.member-title {
+  display: flex;
+  justify-content: center;
 }
 
 .team-image-container {
@@ -13,6 +26,11 @@
 
 }
 
+.center-content {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
 
 .team-image-container * {
   height: 10rem;

@@ -24,10 +24,12 @@ export const TeamPageTemplate = ({
         <Team
           data={data}
           header={'Team'}
+          number={'three'}
         />
         <Team
           data={advisordata}
           header={'Advisors'}
+          number={'two'}
         />
       </Container>
     </div>
