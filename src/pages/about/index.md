@@ -13,6 +13,7 @@ aboutTeam:
     The difference between style and fashion is quality. War taught me that not
     everything is glamorous. War taught me that not everything is glamorous.
   featuredImage: /img/mimi-thian-vhq0cw2eua-unsplash.jpg
+  page: team-page
 aboutNews:
   page: news-page
   heading: Phoenix Fashion News on Demand
