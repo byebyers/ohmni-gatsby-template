@@ -12,6 +12,7 @@ export const TeamPageTemplate = ({
   body,
   contentComponent,
   data,
+  advisordata,
  }) => {
   const PageContent = contentComponent || Content
   return (
@@ -20,7 +21,14 @@ export const TeamPageTemplate = ({
           <PageContent className="content" content={body} />
       </Container>
       <Container>
-        <Team data={data} />
+        <Team
+          data={data}
+          header={'Team'}
+        />
+        <Team
+          data={advisordata}
+          header={'Advisors'}
+        />
       </Container>
     </div>
   )
@@ -39,6 +47,7 @@ const TeamPage = ({ data }) => {
         contentComponent={HTMLContent}
         body={page.html}
         data={data.teamMembers}
+        advisordata={data.advisorMembers}
       />
     </Layout>
   )
@@ -57,6 +66,26 @@ export const teamPageQuery = graphql`
     }
     teamMembers: allMarkdownRemark(
       filter: {frontmatter: {templateKey: {eq: "team-page"}, subKey: {eq: "team-member"}}}
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            name
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    advisorMembers: allMarkdownRemark(
+      filter: {frontmatter: {templateKey: {eq: "team-page"}, subKey: {eq: "advisor-member"}}}
     ) {
       edges {
         node {

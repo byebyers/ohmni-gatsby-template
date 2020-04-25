@@ -1,4 +1,19 @@
+.member-section {
+  margin: 0 0 2rem 0;
+}
+
 .member-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+}
+
+.team-image-container {
+  margin: 0 0 1rem 0;
+
+}
+
+
+.team-image-container * {
+  height: 10rem;
 }
