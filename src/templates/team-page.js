@@ -26,6 +26,8 @@ export const TeamPageTemplate = ({
           header={'Team'}
           number={'three'}
         />
+      </Container>
+      <Container>
         <Team
           data={advisordata}
           header={'Advisors'}

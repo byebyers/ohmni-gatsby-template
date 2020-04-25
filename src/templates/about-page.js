@@ -21,6 +21,7 @@ export const AboutPageTemplate = ({
   anewsthumb,
   ateamheading,
   ateamcontent,
+  ateampage,
   ateamthumb,
 }) => {
   const PageContent = contentComponent || Content
@@ -36,17 +37,18 @@ export const AboutPageTemplate = ({
           <PageContent className="content" content={content} />
       </Container>
       <Feature
-        image={anewsthumb}
-        heading={anewsheading}
-        content={anewscontent}
-        direction={'left'}
-        link={anewspage}
-      />
-      <Feature
         image={ateamthumb}
         heading={ateamheading}
         content={ateamcontent}
+        direction={'left'}
+        link={ateampage}
+      />
+      <Feature
+        image={anewsthumb}
+        heading={anewsheading}
+        content={anewscontent}
         direction={'right'}
+        link={anewspage}
       />
     </div>
   )
@@ -77,6 +79,7 @@ const AboutPage = ({ data }) => {
         anewsthumb={post.frontmatter.aboutNews.featuredImage}
         ateamheading={post.frontmatter.aboutTeam.heading}
         ateamcontent={post.frontmatter.aboutTeam.aboutFeatureContent}
+        ateampage={post.frontmatter.aboutTeam.page}
         ateamthumb={post.frontmatter.aboutTeam.featuredImage}
       />
     </Layout>
@@ -118,6 +121,7 @@ export const aboutPageQuery = graphql`
         aboutTeam {
           aboutFeatureContent
           heading
+          page
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
