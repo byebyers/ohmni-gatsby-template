@@ -5,6 +5,7 @@ banner: /img/james-day-urmik_ustci-unsplash.jpg
 heading: About Kinfeshion
 subheading: Phoenix Fashion Source
 aboutTeam:
+  page: team-page
   heading: Expertise behind Kinfeshion
   aboutFeatureContent: >-
     It is difficult to talk about fashion in the abstract, without a human body
@@ -13,7 +14,6 @@ aboutTeam:
     The difference between style and fashion is quality. War taught me that not
     everything is glamorous. War taught me that not everything is glamorous.
   featuredImage: /img/mimi-thian-vhq0cw2eua-unsplash.jpg
-  page: team-page
 aboutNews:
   page: news-page
   heading: Phoenix Fashion News on Demand

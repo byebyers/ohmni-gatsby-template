@@ -3,7 +3,13 @@
   //border: 5px solid red;
 }
 
+//Makes sure that the footer is at the bottom of the page for small pages
+.main-content {
+  min-height: calc(100vh - 120px);
+  min-height: calc((var(--vh, 1vh) * 100) - 120px);
+}
 
+//Fancy Lines on top of site
 .o-lines {
   position: fixed;
   top: 0;

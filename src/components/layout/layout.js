@@ -32,7 +32,9 @@ const Layout = ({ children }) => {
         <div className="o-lines_line o-layout_item"></div>
         <div className="o-lines_line o-layout_item"></div>
       </div>
-      {children}
+      <div className="main-content">
+        {children}
+      </div>
       <Footer
         siteTitle={data.site.siteMetadata.title}
       />

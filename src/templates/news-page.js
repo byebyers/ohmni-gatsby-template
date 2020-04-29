@@ -4,17 +4,22 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
-import FeaturedPost from '../components/featured-post/featured-post'
+
 
 const BlogPage = ({ data }) => {
 
   return (
     <Layout>
-      <Container>
-        <FeaturedPost data={data.allMarkdownRemark}/>
+      <Container size={'regular'}>
+        <BlogRoll
+          data={data.allMarkdownRemark}
+          featured={'yes'}
+        />
         <h1>Latest</h1>
         <hr />
-        <BlogRoll data={data.allMarkdownRemark}/>
+        <BlogRoll
+          data={data.allMarkdownRemark}
+        />
       </Container>
     </Layout>
   )

@@ -12,30 +12,28 @@ const Feature = ({ image, heading, content, direction, link }) => {
     const pageinfo = pagelink.split("-")
     const pagename = pageinfo[0]
     return (
-      <div className="oh-feature">
-        <section className={`feature-container ${direction}-feature`}>
-          <div className="feature-image-container">
-            <div className="feature-image">
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: image,
-                  alt: `featured image for About page`,
-                }}
-              />
-            </div>
+      <section className={`feature-container ${direction}-feature`}>
+        <div className="feature-image-container">
+          <div className="feature-image">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: image,
+                alt: `featured image for About page`,
+              }}
+            />
           </div>
-          <div className="feature-content">
-            <h1>{heading}</h1>
-            <p>{content}</p>
-            <Link
-              className="text-black"
-              to={`/${pagename}/`}
-            >
-              <p>Read More</p>
-            </Link>
-          </div>
-        </section>
-      </div>
+        </div>
+        <div className="feature-content">
+          <h1>{heading}</h1>
+          <p>{content}</p>
+          <Link
+            className="text-black"
+            to={`/${pagename}/`}
+          >
+            <p>Read More</p>
+          </Link>
+        </div>
+      </section>
     )
   } else {
     return (

@@ -52,7 +52,7 @@ const AuthorPage = ({ data }) => {
   const { authorPage: owner} = data
   return (
     <Layout>
-      <Container>
+      <Container size={'regular'}>
         <AuthorPageTemplate
           title={owner.frontmatter.title}
           description={owner.frontmatter.description}
@@ -65,7 +65,9 @@ const AuthorPage = ({ data }) => {
           inMail={owner.frontmatter.inMail}
         />
         <hr />
-        <BlogRoll data={data.authorPosts} />
+        <BlogRoll
+          data={data.authorPosts}
+        />
       </Container>
     </Layout>
   )

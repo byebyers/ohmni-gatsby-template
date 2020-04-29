@@ -33,23 +33,27 @@ export const AboutPageTemplate = ({
         subheading={subheading}
         banner={banner}
       />
-      <Container>
+      <Container size={'regular'}>
           <PageContent className="content" content={content} />
       </Container>
-      <Feature
-        image={ateamthumb}
-        heading={ateamheading}
-        content={ateamcontent}
-        direction={'left'}
-        link={ateampage}
-      />
-      <Feature
-        image={anewsthumb}
-        heading={anewsheading}
-        content={anewscontent}
-        direction={'right'}
-        link={anewspage}
-      />
+      <Container size={'large'}>
+        <Feature
+          image={ateamthumb}
+          heading={ateamheading}
+          content={ateamcontent}
+          direction={'left'}
+          link={ateampage}
+        />
+      </Container>
+      <Container size={'large'}>
+        <Feature
+          image={anewsthumb}
+          heading={anewsheading}
+          content={anewscontent}
+          direction={'right'}
+          link={anewspage}
+        />
+      </Container>
     </div>
   )
 }

@@ -1,15 +1,17 @@
-.oh-social {
-  display: grid;
-  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 80vw) minmax(.5rem, 1fr);
-  padding: 10rem 0;
-  border-bottom: 1px solid black;
-}
-.social-container {
-  grid-column: 2;
-  align-items: center;
-  padding: 0 6rem;
+.socialMedia {
+  grid-area: social;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.social-icons {
-  display: flex
+.socialItem a {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 1rem 0;
+}
+
+.socialItem img {
+  height: 1.2rem;
+  margin-bottom: 0 !important;
+  padding: 0 .5rem 0 0;
 }

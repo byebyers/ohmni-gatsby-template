@@ -30,7 +30,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <Container>
+    <Container size={'regular'}>
       <section>
         {helmet || ''}
         <h1 className="post-title">{title}</h1>

@@ -12,32 +12,15 @@
   display: flex;
   flex-direction: column;
   padding: 0 0 0 1.5rem;
+  margin: 0 0 1rem 0;
   justify-content: center;
 }
 
 .author-image-container {
   grid-area: image;
+  margin: 0 0 1rem 0;
 }
 
 .author-image {
   height: 100%;
-}
-
-.socialMedia {
-  grid-area: social;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem 0 0 0;
-}
-
-.socialItem a {
-  display: flex;
-  align-items: center;
-  padding: 0 1rem 1rem 0;
-}
-
-.socialItem img {
-  height: 1.2rem;
-  margin-bottom: 0 !important;
-  padding: 0 .5rem 0 0;
 }

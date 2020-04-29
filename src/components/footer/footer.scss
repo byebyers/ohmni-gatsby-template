@@ -1,13 +1,5 @@
-.oh-footer {
-  display: grid;
-  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 80vw) minmax(.5rem, 1fr);
-  padding: 5rem 0;
-  border-bottom: 1px solid black;
-}
 .footer-container {
-  grid-column: 2;
   align-items: flex-start;
-  padding: 0 .4rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }

@@ -9,12 +9,14 @@ import BlogRoll from '../components/rolls/blog-roll'
 
 const CategoryPage = ({ pageContext, data }) => {
   const { title } = pageContext
-  const { allMarkdownRemark: owner} = data
+  const { allMarkdownRemark: category} = data
   return (
     <Layout>
-      <Container>
+      <Container size={'regular'}>
         <h1>{title}</h1>
-        <BlogRoll data={owner} />
+        <BlogRoll
+          data={category}
+        />
       </Container>
     </Layout>
   )

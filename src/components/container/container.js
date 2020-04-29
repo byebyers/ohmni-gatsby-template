@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './container.scss'
 
-const Container = ({ children }) => (
-  <div className="container-wrapper main-content">
+const Container = ({ children, size, height }) => (
+  <div className={`container-wrapper ${height ? 'con-small' : 'con-regular'} col-${size}`}>
     <div className="container-div">
-      <div>{children}</div>
+      {children}
     </div>
   </div>
 )

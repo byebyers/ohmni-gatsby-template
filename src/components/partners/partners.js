@@ -6,23 +6,18 @@ import './partners.scss'
 const Partners = ({ data }) => {
   const { edges: partners } = data
   return (
-    <div className="oh-partner">
-      <div className="partner-container">
-        <h1>Partnered with</h1>
-        <div className="partner-content">
-        {partners &&
-          partners.map(({ node: partner }) => (
-            <div className="partner-item">
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: partner.frontmatter.thumbnail,
-                  alt: `featured image thumbnail for partner ${partner.frontmatter.title}`,
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="partner-content">
+      {partners &&
+        partners.map(({ node: partner }) => (
+          <div className="partner-item">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: partner.frontmatter.thumbnail,
+                alt: `featured image thumbnail for partner ${partner.frontmatter.title}`,
+              }}
+            />
+          </div>
+        ))}
     </div>
   )
 }

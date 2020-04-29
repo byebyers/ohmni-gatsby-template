@@ -1,17 +1,35 @@
-.main-content {
-  min-height: calc(100vh - 120px);
-  min-height: calc((var(--vh, 1vh) * 100) - 120px);
-}
+//Variables in Global
+@import '../../global.scss';
 
 .container-wrapper {
   display: grid;
-  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 50vw) minmax(.5rem, 1fr);
-  padding: 10rem 0;
   border-bottom: 1px solid black;
+}
+
+.display-container {
+  padding: 0 6rem;
+}
+
+.con-regular {
+  padding: 10rem 0;
+}
+
+.con-small {
+  padding: 5rem 0;
+}
+
+.col-large {
+  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 80vw) minmax(.5rem, 1fr);
+}
+
+.col-regular {
+  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 50vw) minmax(.5rem, 1fr);
 }
 
 .container-div {
   grid-column: 2;
+  display: grid;
+  align-content: center;
 }
 
 @media only screen and (max-width: 56rem) {

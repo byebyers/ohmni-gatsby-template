@@ -1,16 +1,3 @@
-.oh-partner {
-  display: grid;
-  grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 80vw) minmax(.5rem, 1fr);
-  padding: 10rem 0;
-  border-bottom: 1px solid black;
-}
-
-.partner-container {
-  grid-column: 2;
-  align-items: center;
-  padding: 0 6rem;
-}
-
 .partner-content {
   display: flex;
   align-items: center;

@@ -17,17 +17,17 @@ export const TeamPageTemplate = ({
   const PageContent = contentComponent || Content
   return (
     <div>
-      <Container>
+      <Container size={'regular'}>
           <PageContent className="content" content={body} />
       </Container>
-      <Container>
+      <Container size={'regular'}>
         <Team
           data={data}
           header={'Team'}
           number={'three'}
         />
       </Container>
-      <Container>
+      <Container size={'regular'}>
         <Team
           data={advisordata}
           header={'Advisors'}

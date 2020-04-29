@@ -5,6 +5,14 @@
   margin: 0 0 2rem 0;
 }
 
+.featured-post-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "image image"
+                   "content content";
+  margin: 0 0 3rem 0;
+}
+
 .roll-post-content {
   grid-area: content;
   display: flex;
@@ -12,12 +20,12 @@
   padding: 0 1.5rem 0 0;
 }
 
-.roll-header {
-  margin: 0 0 3rem 0;
-}
-
 .roll-image-container {
   grid-area: image;
+}
+
+.featured-image {
+  margin: 0 0 1rem 0;
 }
 
 .roll-post-image {
@@ -40,10 +48,17 @@
 }
 
 .roll-title {
-  font-size: 1.2rem;
   font-weight: 600;
   color: black;
   margin: 0 0 .5rem 0;
+}
+
+.r-s {
+  font-size: 1.2rem;
+}
+
+.f-s {
+  font-size: 2rem;
 }
 
 .roll-details {

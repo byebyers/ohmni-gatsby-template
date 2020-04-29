@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "gatsby"
+import Container from '../container/container'
 import './footer.scss'
 
 const Footer = ({ siteTitle }) => {
   return (
     <footer>
-      <div className="oh-footer">
+      <Container
+        size={'large'}
+        height={'small'}
+      >
         <div className="footer-container">
           <div className="footer-item">
             <Link to="/" className="text-black">
@@ -20,7 +24,7 @@ const Footer = ({ siteTitle }) => {
             <h2>Address</h2>
           </div>
         </div>
-      </div>
+      </Container>
       <div className="copyRight">
         © {new Date().getFullYear()},
         {` `}
