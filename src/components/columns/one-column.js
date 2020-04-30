@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 import './columns.scss'
 
 
-const Onecol = ({ onecolheadline, onecolcontent }) => {
+const Onecol = ({ headline, body }) => {
   return (
     <section className="one-col-div">
-      <h1>{onecolheadline}</h1>
-      <p>{onecolcontent}</p>
+      <h1>{headline}</h1>
+      <p>{body}</p>
     </section>
   )
 }
 
 Onecol.propTypes = {
-  onecolheadline: PropTypes.string.isRequired,
-  onecolcontent: PropTypes.string,
+  headline: PropTypes.string.isRequired,
+  body: PropTypes.string,
 }
 
 export default Onecol

@@ -1,23 +1,23 @@
 ---
 templateKey: about-page
 path: /about
-banner: /img/james-day-urmik_ustci-unsplash.jpg
+image: /img/james-day-urmik_ustci-unsplash.jpg
 heading: About Kinfeshion
 subheading: Phoenix Fashion Source
 aboutTeam:
   page: team-page
   heading: Expertise behind Kinfeshion
-  aboutFeatureContent: >-
+  description: >-
     It is difficult to talk about fashion in the abstract, without a human body
     before my eyes, without drawings, without a choice of fabric - without a
     practical or visual reality. War taught me that not everything is glamorous.
     The difference between style and fashion is quality. War taught me that not
     everything is glamorous. War taught me that not everything is glamorous.
-  featuredImage: /img/mimi-thian-vhq0cw2eua-unsplash.jpg
+  image: /img/mimi-thian-vhq0cw2eua-unsplash.jpg
 aboutNews:
   page: news-page
   heading: Phoenix Fashion News on Demand
-  aboutFeatureContent: >-
+  description: >-
     Comfort is very important to me. I think people live better in big houses
     and in big clothes. That is the key of this collection, being yourself.
     Don't be into trends. Don't make fashion own you, but you decide what you
@@ -27,7 +27,7 @@ aboutNews:
     change. For me, the summer will be pure gray - mother-of-pearl gray, very
     pale gray. To me, this is the big statement for summer. Then we have light
     blue, light turquoise, lots of pink.
-  featuredImage: /img/branden-harvey-wyn0qfdixw0-unsplash.jpg
+  image: /img/branden-harvey-wyn0qfdixw0-unsplash.jpg
 ---
 I think the idea of mixing luxury and mass-market fashion is very modern, very now - no one wears head-to-toe designer anymore.
 

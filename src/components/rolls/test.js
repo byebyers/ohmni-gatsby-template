@@ -27,7 +27,7 @@ const BlogRoll = ({ data, featured }) => {
       {posts &&
         posts.map(({ node: post }) => (
           <div>
-            {post.frontmatter.featuredpost ? (
+            {post.frontmatter.featured ? (
               <article className="featured-post-container">
                 <div className="roll-post-content">
                   <Link to={`/categories/category-${kebabCase(post.frontmatter.category)}/`} className="text-black">
@@ -58,7 +58,7 @@ const BlogRoll = ({ data, featured }) => {
                   </div>
                 </div>
                 <div className="roll-image-container featured-image">
-                  {post.frontmatter.featuredimage ? (
+                  {post.frontmatter.image ? (
 
                       <Link
                         className="roll-post-image"
@@ -66,7 +66,7 @@ const BlogRoll = ({ data, featured }) => {
                       >
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: post.frontmatter.featuredimage,
+                          image: post.frontmatter.image,
                           alt: `featured image for post ${post.frontmatter.title}`,
                         }}
                       />

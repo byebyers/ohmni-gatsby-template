@@ -9,7 +9,7 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
       <AboutPageTemplate
         heading={data.heading}
         subheading={data.subheading}
-        banner={data.banner}
+        banner={data.image}
         content={widgetFor('body')}
       />
     )

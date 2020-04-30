@@ -9,8 +9,8 @@ date: 2020-04-17T23:42:34.931Z
 description: >-
   Photographer Joe Pugliese energizes his renown professional practice with
   hobbies that invite mistakes and outright failure.
-featuredpost: true
-featuredimage: /img/1920x1080-joepug-st-04.jpg
+featured: true
+image: /img/1920x1080-joepug-st-04.jpg
 photoCredit: Adobe Create Magazine
 ---
 I'm in Hollywood to meet photographer Joe Pugliese. I walk past star-studded sidewalks and restaurants you've seen a million times on movies and TV, but there are no celebrity sightings, just regular Angelenos going about their business. It's a fitting match for Joe’s photographs, which bridge the gap between stars and civilians by normalizing the celebrity and elevating the rest of us to a hero expression of ourselves.

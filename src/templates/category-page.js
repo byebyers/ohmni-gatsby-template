@@ -52,7 +52,7 @@ export const query = graphql`
             author
             category
             date(formatString: "MMMM DD, YYYY")
-            featuredimage {
+            image {
               childImageSharp {
                 fluid(maxWidth: 120, quality: 100) {
                   ...GatsbyImageSharpFluid

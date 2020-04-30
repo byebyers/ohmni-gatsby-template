@@ -28,8 +28,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean", required: false, default: false}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Featured Post", name: "featured", widget: "boolean", required: false, default: false}
+      - {label: "Featured Image", name: "image", widget: image}
       - {label: "Photo Credit", name: "photoCredit", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "authors"
@@ -41,8 +41,8 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "author-page"}
       - {label: "Author Name", name: "title", widget: "string"}
-      - {label: "Author Thumbnail", name: "thumbnail", widget: image}
-      - {label: "About", name: "description", widget: "text"}
+      - {label: "Author Thumbnail", name: "image", widget: image}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Facebook Link", name: "facebook", widget: "string", required: false}
       - {label: "Instagram Link", name: "instagram", widget: "string", required: false}
       - {label: "Linkedin Link", name: "linkedin", widget: "string", required: false}
@@ -69,8 +69,8 @@ collections:
       - {label: "Event Name", name: "title", widget: "string"}
       - {label: "Start", name: "start-date", widget: "datetime"}
       - {label: "End", name: "end-date", widget: "datetime"}
-      - {label: "Event Thumbnail", name: "thumbnail", widget: image}
-      - {label: "About", name: "description", widget: "text"}
+      - {label: "Event Thumbnail", name: "image", widget: image}
+      - {label: "Description", name: "description", widget: "text"}
   - name: "partners"
     label: "Partners"
     label_singular: "Partner"
@@ -80,7 +80,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-page"}
       - {label: "Partner Name", name: "title", widget: "string"}
-      - {label: "Partner Thumbnail", name: "thumbnail", widget: image}
+      - {label: "Partner Thumbnail", name: "image", widget: image}
   - name: "team"
     label: "Team"
     label_singular: "Member"
@@ -92,7 +92,7 @@ collections:
       - {label: "Sub Key", name: "subKey", widget: "hidden", default: "team-member"}
       - {label: "Member Name", name: "title", widget: "string"}
       - {label: "Member Title", name: "position", widget: "string"}
-      - {label: "Member Thumbnail", name: "thumbnail", widget: image}
+      - {label: "Member Thumbnail", name: "image", widget: image}
   - name: "advisory-board"
     label: "Advisory Board"
     label_singular: "Member"
@@ -112,25 +112,25 @@ collections:
         name: "home"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: "Banner", name: "banner", widget: "image"}
+          - {label: "Banner", name: "image", widget: "image"}
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Subheading", name: "subheading", widget: "markdown"}
-          - {label: "OneColHeadline", name: "onecolheadline", widget: "string"}
-          - {label: "OneColContent", name: "onecolcontent", widget: "markdown"}
+          - {label: "Headline", name: "headline", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
           - label: "About Page Feature"
             name: "aboutFeature"
             widget: "object"
             fields:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Link to another page?", name: "page", widget: "relation", collection: "pages", searchFields: ["templateKey"], valueField: "templateKey", displayFields: ["templateKey"], required: false}
-              - {label: "Content", name: "aboutFeatureContent", widget: "markdown"}
-              - {label: "Image", name: "featuredImage", widget: "image"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Image", name: "image", widget: "image"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Banner", name: "banner", widget: "image"}
+          - {label: "Banner", name: "image", widget: "image"}
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Subheading", name: "subheading", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
@@ -140,16 +140,16 @@ collections:
             fields:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Link to another page?", name: "page", widget: "relation", collection: "pages", searchFields: ["templateKey"], valueField: "templateKey", displayFields: ["templateKey"], required: false}
-              - {label: "Content", name: "aboutFeatureContent", widget: "markdown"}
-              - {label: "Image", name: "featuredImage", widget: "image"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Image", name: "image", widget: "image"}
           - label: "News Page Feature"
             name: "aboutNews"
             widget: "object"
             fields:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Link to another page?", name: "page", widget: "relation", collection: "pages", searchFields: ["templateKey"], valueField: "templateKey", displayFields: ["templateKey"], required: false}
-              - {label: "Content", name: "aboutFeatureContent", widget: "markdown"}
-              - {label: "Image", name: "featuredImage", widget: "image"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Image", name: "image", widget: "image"}
       - file: "src/pages/news/index.md"
         label: "News"
         name: "news"

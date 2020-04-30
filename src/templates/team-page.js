@@ -77,7 +77,7 @@ export const teamPageQuery = graphql`
           frontmatter {
             title
             position
-            thumbnail {
+            image {
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
                   ...GatsbyImageSharpFluid

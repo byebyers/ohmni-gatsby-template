@@ -9,7 +9,7 @@ const AuthorImage = ({ imgName }) => (
         query {
           markdownRemark(frontmatter: {title: {eq: "originalName"}}) {
             frontmatter {
-              thumbnail {
+              image {
                 childImageSharp {
                   fluid(maxWidth: 120, quality: 100) {
                     ...GatsbyImageSharpFluid

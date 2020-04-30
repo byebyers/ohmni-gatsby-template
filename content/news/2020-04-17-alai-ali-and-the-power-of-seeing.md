@@ -2,8 +2,8 @@
 templateKey: blog-post
 author: Jacob Byers
 date: 2020-04-17T23:50:18.395Z
-featuredpost: false
-featuredimage: /img/1920x1080-alia-ali.jpg
+featured: false
+image: /img/1920x1080-alia-ali.jpg
 photoCredit: Photo by Branden Harvey on Unsplash
 gallery:
   image1: /img/olivier-guillard-pb9uuryyxsi-unsplash.jpg

@@ -12,7 +12,7 @@ const Partners = ({ data }) => {
           <div className="partner-item">
             <PreviewCompatibleImage
               imageInfo={{
-                image: partner.frontmatter.thumbnail,
+                image: partner.frontmatter.image,
                 alt: `featured image thumbnail for partner ${partner.frontmatter.title}`,
               }}
             />

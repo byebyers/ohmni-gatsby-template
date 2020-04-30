@@ -10,8 +10,8 @@ date: 2020-04-17T22:28:42.443Z
 description: >-
   The guidelines in identify manuals of decades past may no longer apply to
   their brands, but they're rich in ideas for today's designers.
-featuredpost: false
-featuredimage: /img/joanna-kosinska-1_cmofspfso-unsplash.jpg
+featured: false
+image: /img/joanna-kosinska-1_cmofspfso-unsplash.jpg
 photoCredit: Joanna Kosinska via Unsplash
 ---
 In the last few years, there's been an enthusiastic revival of old-school brand guidelines; for example, the popular reboots of the NASA and New York City Transit Authority standards manuals, both thanks to [Jesse Reed and Hamish Smyth](https://standardsmanual.com/pages/about). I'm a design librarian and archivist with [Letterform Archive](https://create.adobe.com/2019/11/19/saving-design.html), and it’s exciting to see this revival translate into increased interest in the Archive's deep collection of old three-ring binders full of program assets for some of the most recognizable brands, such as Coca-Cola, Nike, and Apple

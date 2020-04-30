@@ -7,8 +7,8 @@ author: Megan Farokhmanesh
 title: 'Getty now has an Animal Crossing: New Horizons art generator'
 date: 2020-04-18T02:29:00.572Z
 description: Three easy steps for your art needs
-featuredpost: false
-featuredimage: /img/b932b09e31bb5d3c77359ae6e47e59ab.0.jpg
+featured: false
+image: /img/b932b09e31bb5d3c77359ae6e47e59ab.0.jpg
 photoCredit: The Verge
 ---
 Custom art is a point of pride for many *Animal Crossing: New Horizons*players. With a little artistic ability, players can create everything from clothing to elaborate floor tiles unique to their game. For the rest of us who lack any real artistic flair, Getty created an art generator to make the process a little easier.

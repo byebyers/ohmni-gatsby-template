@@ -15,7 +15,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  featuredimage,
+  image,
   author,
   thumbnail,
   date,
@@ -72,7 +72,7 @@ export const BlogPostTemplate = ({
         <div className="post-image">
           <PreviewCompatibleImage
             imageInfo={{
-              image: featuredimage,
+              image: image,
               alt: `featured image thumbnail for author ${title}`,
             }}
           />
@@ -93,7 +93,7 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   author: PropTypes.string,
   thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
@@ -103,7 +103,7 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { blogposts: post } = data
   const siteUrl = data.blogsite.siteMetadata.siteUrl
-  const imgPath = post.frontmatter.featuredimage.childImageSharp.fluid.originalImg
+  const imgPath = post.frontmatter.image.childImageSharp.fluid.originalImg
   const siteImg = siteUrl + imgPath
   return (
     <Layout>
@@ -111,9 +111,9 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        featuredimage={post.frontmatter.featuredimage}
+        image={post.frontmatter.image}
         author={post.frontmatter.author}
-        thumbnail={post.fields.author.frontmatter.thumbnail}
+        thumbnail={post.fields.author.frontmatter.image}
         date={post.frontmatter.date}
         timeToRead={post.timeToRead}
         helmet={
@@ -168,7 +168,7 @@ export const pageQuery = graphql`
       fields {
         author {
           frontmatter {
-            thumbnail {
+            image {
               childImageSharp {
                 fluid(maxWidth: 120, quality: 100) {
                   ...GatsbyImageSharpFluid
@@ -183,7 +183,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        featuredimage {
+        image {
           childImageSharp {
             fluid(maxWidth: 120, quality: 100) {
               ...GatsbyImageSharpFluid

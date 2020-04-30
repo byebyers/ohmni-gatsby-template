@@ -56,7 +56,7 @@ const AuthorPage = ({ data }) => {
         <AuthorPageTemplate
           title={owner.frontmatter.title}
           description={owner.frontmatter.description}
-          thumbnail={owner.frontmatter.thumbnail}
+          thumbnail={owner.frontmatter.image}
           facebook={owner.frontmatter.facebook}
           instagram={owner.frontmatter.instagram}
           linkedin={owner.frontmatter.linkedin}
@@ -95,7 +95,7 @@ export const query = graphql`
         inWebsite
         inMail
         description
-        thumbnail {
+        image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -123,7 +123,7 @@ export const query = graphql`
             author
             category
             date(formatString: "MMMM DD, YYYY")
-            featuredimage {
+            image {
               childImageSharp {
                 fluid(maxWidth: 120, quality: 100) {
                   ...GatsbyImageSharpFluid

@@ -13,14 +13,14 @@ const BlogPostPreview = ({ entry, widgetFor, fieldsMetaData  }) => {
     const authorObj = fields.author.authors
     const postAuthor = data.author
     const authorData = authorObj[postAuthor]
-    const authorThumb = authorData.thumbnail
+    const authorThumb = authorData.image
     return (
       <BlogPostTemplate
         content={data.body}
         description={data.description}
-        featuredimage={data.featuredimage}
+        image={data.image}
         author={postAuthor}
-        thumbnail={authorThumb}
+        image={authorThumb}
         date={postDate}
         tags={tags && tags.toJS()}
         title={data.title}

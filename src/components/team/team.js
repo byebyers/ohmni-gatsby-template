@@ -13,17 +13,17 @@ const Team = ({ data, header, number }) => {
       {members &&
         members.map(({node: member}) => (
           <div>
-            {member.frontmatter.thumbnail ? (
+            {member.frontmatter.image ? (
               <div className="team-image-container">
                 <PreviewCompatibleImage
                   imageInfo={{
-                    image: member.frontmatter.thumbnail,
+                    image: member.frontmatter.image,
                     alt: `featured image for team member ${member.frontmatter.name}`,
                   }}
                 />
               </div>
             ) : ''}
-            <div className={`team-content ${member.frontmatter.thumbnail ? '' : 'center-content'}`}>
+            <div className={`team-content ${member.frontmatter.image ? '' : 'center-content'}`}>
               <h3>{member.frontmatter.title}</h3>
               <p>{member.frontmatter.position}</p>
             </div>

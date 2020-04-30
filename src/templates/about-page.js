@@ -75,16 +75,16 @@ const AboutPage = ({ data }) => {
         contentComponent={HTMLContent}
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
-        banner={post.frontmatter.banner}
+        banner={post.frontmatter.image}
         content={post.html}
         anewsheading={post.frontmatter.aboutNews.heading}
-        anewscontent={post.frontmatter.aboutNews.aboutFeatureContent}
+        anewscontent={post.frontmatter.aboutNews.description}
         anewspage={post.frontmatter.aboutNews.page}
-        anewsthumb={post.frontmatter.aboutNews.featuredImage}
+        anewsthumb={post.frontmatter.aboutNews.image}
         ateamheading={post.frontmatter.aboutTeam.heading}
-        ateamcontent={post.frontmatter.aboutTeam.aboutFeatureContent}
+        ateamcontent={post.frontmatter.aboutTeam.description}
         ateampage={post.frontmatter.aboutTeam.page}
-        ateamthumb={post.frontmatter.aboutTeam.featuredImage}
+        ateamthumb={post.frontmatter.aboutTeam.image}
       />
     </Layout>
   )
@@ -103,7 +103,7 @@ export const aboutPageQuery = graphql`
       frontmatter {
         heading
         subheading
-        banner {
+        image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -111,10 +111,10 @@ export const aboutPageQuery = graphql`
           }
         }
         aboutNews{
-          aboutFeatureContent
+          description
           heading
           page
-          featuredImage {
+          image {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -123,10 +123,10 @@ export const aboutPageQuery = graphql`
           }
         }
         aboutTeam {
-          aboutFeatureContent
+          description
           heading
           page
-          featuredImage {
+          image {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
                 ...GatsbyImageSharpFluid

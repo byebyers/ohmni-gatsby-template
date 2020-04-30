@@ -16,8 +16,8 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   banner,
-  onecolheadline,
-  onecolcontent,
+  headline,
+  body,
   aboutfeature,
   featureimage,
   featureheading,
@@ -32,8 +32,8 @@ export const IndexPageTemplate = ({
     />
     <Container size={'regular'}>
       <Onecol
-        onecolheadline={onecolheadline}
-        onecolcontent={onecolcontent}
+        headline={headline}
+        body={body}
       />
     </Container>
     <Container size={'large'}>
@@ -52,8 +52,8 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   banner: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  onecolheadline: PropTypes.string,
-  onecolcontent: PropTypes.string,
+  headline: PropTypes.string,
+  body: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
@@ -64,11 +64,11 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
-        banner={post.frontmatter.banner}
-        onecolheadline={post.frontmatter.onecolheadline}
-        onecolcontent={post.frontmatter.onecolcontent}
-        aboutfeature={post.frontmatter.aboutFeature.aboutFeatureContent}
-        featureimage={post.frontmatter.aboutFeature.featuredImage}
+        banner={post.frontmatter.image}
+        headline={post.frontmatter.headline}
+        body={post.frontmatter.body}
+        aboutfeature={post.frontmatter.aboutFeature.description}
+        image={post.frontmatter.aboutFeature.image}
         featureheading={post.frontmatter.aboutFeature.heading}
         featurelink={post.frontmatter.aboutFeature.page}
       />
@@ -102,7 +102,6 @@ const IndexPage = ({ data }) => {
     </Layout>
   )
 }
-
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
@@ -121,20 +120,20 @@ export const homePageQuery = graphql`
       frontmatter {
         heading
         subheading
-        banner {
+        image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        onecolheadline
-        onecolcontent
+        headline
+        body
         aboutFeature {
           heading
-          aboutFeatureContent
+          description
           page
-          featuredImage {
+          image {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -162,8 +161,8 @@ export const homePageQuery = graphql`
             templateKey
             author
             date(formatString: "MMMM DD, YYYY")
-            featuredpost
-            featuredimage {
+            featured
+            image {
               childImageSharp {
                 fluid(maxWidth: 120, quality: 100) {
                   ...GatsbyImageSharpFluid
@@ -193,7 +192,7 @@ export const homePageQuery = graphql`
         node {
           frontmatter {
             title
-            thumbnail {
+            image {
               childImageSharp {
                 fluid(maxWidth: 120, quality: 100) {
                   ...GatsbyImageSharpFluid

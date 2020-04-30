@@ -11,7 +11,7 @@ const AuthorPagePreview = ({ entry, widgetFor }) => {
         <AuthorPageTemplate
           title={data.title}
           description={data.description}
-          thumbnail={data.thumbnail}
+          thumbnail={data.image}
           facebook={data.facebook}
           instagram={data.instagram}
           linkedin={data.linkedin}
