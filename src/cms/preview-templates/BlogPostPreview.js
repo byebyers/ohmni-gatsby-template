@@ -20,7 +20,7 @@ const BlogPostPreview = ({ entry, widgetFor, fieldsMetaData  }) => {
         description={data.description}
         image={data.image}
         author={postAuthor}
-        image={authorThumb}
+        thumbnail={authorThumb}
         date={postDate}
         tags={tags && tags.toJS()}
         title={data.title}
