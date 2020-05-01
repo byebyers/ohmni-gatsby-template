@@ -1,13 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+//Components
 import {
 	FacebookShareButton,
 	LinkedinShareButton,
 	TwitterShareButton,
 } from 'react-share'
 
+//Styles
 import './share.scss'
 
+/* This uses react-share component to pull page's
+  	data so it can be shared on social media.
+		Differs from social.js component because we are
+		sharing contents of the page that includes this
+		component. */
 const Share = ({ socialConfig, tags }) => (
 	<div className="article-share">
     <h4 className="article-title">Share</h4>

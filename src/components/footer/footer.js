@@ -1,9 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+//Components
 import { Link } from "gatsby"
 import Container from '../container/container'
+
+//Styles
 import './footer.scss'
 
+/* This footer is the space at the bottom of the website
+  and includes a site meny and company address. Site title comes from a page query  */
 const Footer = ({ siteTitle }) => {
   return (
     <footer>

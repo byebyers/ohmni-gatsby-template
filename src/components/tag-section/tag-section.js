@@ -1,9 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+//Components
 import { Link } from 'gatsby'
 import { kebabCase } from 'lodash'
+
+//Styles
 import './tag-section.scss'
 
+
+/* This component maps out tags from a
+  blog post or article. It differs from
+  tags.js because it only shows tags on a post. */
 const TagSection = ({ tags }) => {
   return (
     <div>

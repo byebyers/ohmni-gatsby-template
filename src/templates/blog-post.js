@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+//Components
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout/layout'
@@ -9,8 +11,11 @@ import Content, { HTMLContent } from '../components/content/content'
 import { kebabCase } from 'lodash'
 import TagSection from '../components/tag-section/tag-section'
 import Share from '../components/share/share'
+
+//Styles
 import './blog-post.scss'
 
+/* Check Netlify Config file for field data */
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -151,6 +156,9 @@ BlogPost.propTypes = {
 
 export default BlogPost
 
+/* Filters the following.
+  blogsite = gets blog post page's metadata for share.js
+  blogposts = gets markdownRemark for specified posts */
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     blogsite: site {

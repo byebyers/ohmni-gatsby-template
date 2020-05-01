@@ -7,9 +7,12 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+
+//Components
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+/* Queries meta data from gatsby-config.js */
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`

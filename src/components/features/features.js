@@ -1,13 +1,24 @@
 import React from "react"
 import PropTypes from 'prop-types'
+
+//Components
 import { Link } from "gatsby"
 import PreviewCompatibleImage from '../preview-compatible-image'
+
+//Styles
 import './features.scss'
 
-
+/* This is a block container for content.
+  See pages for use*/
 const Feature = ({ image, heading, content, direction, link }) => {
 
   if (link) {
+    /* Link is optionally provided from the cms as a drop down
+      menu item on pages that include this component. It allows
+      the page to link a page with a small description and image.
+      However the data point recieved is pagename-page so we
+      have to remove -page from that data point so it links
+      correctly to the page specified. */
     const pagelink = link
     const pageinfo = pagelink.split("-")
     const pagename = pageinfo[0]

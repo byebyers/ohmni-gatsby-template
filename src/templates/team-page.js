@@ -8,6 +8,7 @@ import Container from '../components/container/container'
 import Content, { HTMLContent } from '../components/content/content'
 import Team from '../components/team/team'
 
+/* Check Netlify Config file for field data */
 export const TeamPageTemplate = ({
   body,
   contentComponent,
@@ -63,6 +64,10 @@ TeamPage.propTypes = {
 
 export default TeamPage
 
+/* Filters the following
+  teamPage = data from team page
+  teamMemvers = all Team members from CMS
+  advisorMembers = all Advisor members from CMS */
 export const teamPageQuery = graphql`
   query TeamPageQuery($id: String) {
     teamPage: markdownRemark(id: { eq: $id } frontmatter: {templateKey: {eq: "team-page"}, path: {eq: "/team"}}, fields: {}) {

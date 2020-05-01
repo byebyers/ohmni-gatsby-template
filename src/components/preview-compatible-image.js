@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+//Components
 import Img from 'gatsby-image'
 
+/* This serves the best image in the browser */
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: '0px' }
   const { alt = '', childImageSharp, image } = imageInfo

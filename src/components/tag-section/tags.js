@@ -7,6 +7,12 @@ import Layout from '../layout/layout'
 import Container from '../container/container'
 import BlogRoll from '../rolls/blog-roll'
 
+//Styles
+/* Includes styles from rolls.scss which are already defined in rolls folder */
+
+/* This is actually a page created from
+  node.js. It takes a tag and filters
+  posts that are connected to it. */
 const TagPage = ({ pageContext, data }) => {
     const { tag } = pageContext
     const { totalCount: tcount } = data.allMarkdownRemark
@@ -50,6 +56,8 @@ TagPage.propTypes = {
 
 export default TagPage
 
+/* This filters all blog posts related
+  to this tag */
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(

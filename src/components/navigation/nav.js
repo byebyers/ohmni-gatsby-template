@@ -1,7 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-import "./nav.scss"
 
+//Components
+import { Link } from "gatsby"
+
+//Styles
+import "./nav.scss"
 
 const Nav = () => (
   <div className="nav-container">

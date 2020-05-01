@@ -9,6 +9,8 @@ import Halfban from "../components/banners/half-banner"
 import Feature from "../components/features/features"
 import Content, { HTMLContent } from '../components/content/content'
 
+
+/* Check Netlify Config file for field data */
 export const AboutPageTemplate = ({
   heading,
   subheading,
@@ -96,6 +98,7 @@ AboutPage.propTypes = {
 
 export default AboutPage
 
+/* Filters markdownRemark for about-page found in Netlify Config */
 export const aboutPageQuery = graphql`
   query AboutPageTemplate($id: String) {
     markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "about-page" } }) {

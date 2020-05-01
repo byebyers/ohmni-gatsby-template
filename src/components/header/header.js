@@ -1,9 +1,15 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-import "./header.scss"
+import PropTypes from "prop-types"
+
+//Components
+import { Link } from "gatsby"
 import Nav from "../navigation/nav"
 
+//Styles
+import "./header.scss"
+
+/* This header is the space at the top of the website
+  and includes the nav bar. Site title comes from a page query  */
 const Header = ({ siteTitle }) => (
   <header className="main-header">
     <div className="header-container">

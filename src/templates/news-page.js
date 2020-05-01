@@ -1,22 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+//Components
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
 
-
+/* Check Netlify Config file for field data */
 const BlogPage = ({ data }) => {
 
   return (
     <Layout>
       <Container size={'regular'}>
+        {/* This filters for featured post(s) */}
         <BlogRoll
           data={data.allMarkdownRemark}
           featured={'yes'}
         />
         <h1>Latest</h1>
         <hr />
+        {/* Shows all post starting with latest */}
         <BlogRoll
           data={data.allMarkdownRemark}
         />
@@ -31,6 +35,7 @@ BlogPage.propTypes = {
 
 export default BlogPage
 
+/* Filters for all posts */
 export const blogPageQuery = graphql`
   query BlogPageTemplate {
     allMarkdownRemark(

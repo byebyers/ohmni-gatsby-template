@@ -1,7 +1,13 @@
 import React from "react"
 import PropTypes from 'prop-types'
+
+//Styles
 import './social.scss'
 
+/* This component takes social media links provided
+  from the CMS. It differs from share.js because these
+  links are supposed to take you to an Author's or
+  company's social media profile */
 const Social = ({
   facebook,
   instagram,

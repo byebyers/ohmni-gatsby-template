@@ -1,10 +1,15 @@
 import React from "react"
 import PropTypes from 'prop-types'
+
+//Styles
 import './banners.scss'
 
+/* This is an image banner that takes up half of height
+  of the view port.*/
 const Halfban = ({ heading, subheading, banner }) => {
   return (
     <section
+      /* Checks image source */
       style={{
         backgroundImage: `url('${
           !!banner.childImageSharp ? banner.childImageSharp.fluid.src : banner

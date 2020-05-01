@@ -8,6 +8,8 @@ import AuthorSection from '../components/author-section/author-section'
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
 
+
+/* Check Netlify Config file for field data */
 export const AuthorPageTemplate = ({
   title,
   description,
@@ -82,6 +84,9 @@ AuthorPage.propTypes = {
 
 export default AuthorPage
 
+/* Filters the following.
+  authorPage = Gets author data like social media links.
+  authorPosts = Filters all posts for that author. */
 export const query = graphql`
   query AuthorPage($id: String!, $title: String) {
     authorPage: markdownRemark(id: { eq: $id } frontmatter: { templateKey: { eq: "author-page" } }) {

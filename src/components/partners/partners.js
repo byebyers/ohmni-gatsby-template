@@ -1,8 +1,15 @@
 import React from "react"
 import PropTypes from 'prop-types'
+
+//Components
 import PreviewCompatibleImage from '../preview-compatible-image'
+
+//Styles
 import './partners.scss'
 
+/* Data to this component comes from the CMS in the partners section.
+    All it really is are images of company logos that are mapped to
+    the component. */
 const Partners = ({ data }) => {
   const { edges: partners } = data
   return (

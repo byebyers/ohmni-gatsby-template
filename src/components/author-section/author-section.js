@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+//Components
 import PreviewCompatibleImage from '../preview-compatible-image'
 import Social from '../social/social'
+
+//Styles
 import './author-section.scss'
 
 

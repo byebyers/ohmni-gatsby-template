@@ -7,6 +7,9 @@ import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
 import BlogRoll from '../components/rolls/blog-roll'
 
+/* This is actually a page created from
+  node.js. It takes a category and filters
+  posts that are connected to it. */
 const CategoryPage = ({ pageContext, data }) => {
   const { title } = pageContext
   const { allMarkdownRemark: category} = data
@@ -31,6 +34,8 @@ CategoryPage.propTypes = {
 
 export default CategoryPage
 
+/* This filters all blog posts related
+  to this category */
 export const query = graphql`
   query CategoryPage($title: String) {
     allMarkdownRemark(

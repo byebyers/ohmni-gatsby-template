@@ -1,8 +1,10 @@
 import React from "react"
 import PropTypes from 'prop-types'
+
+//Styles
 import './columns.scss'
 
-
+/* Simple one column text box with title */
 const Onecol = ({ headline, body }) => {
   return (
     <section className="one-col-div">

@@ -1,6 +1,8 @@
 import React from "react"
-import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+
+//Components
+import { graphql } from 'gatsby'
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Fullban from "../components/banners/full-banner"
@@ -12,6 +14,7 @@ import Social from '../components/social/social'
 import Partners from '../components/partners/partners'
 import DisContainer from '../components/container/dis-container'
 
+/* Check Netlify Config file for field data */
 export const IndexPageTemplate = ({
   heading,
   subheading,
@@ -68,7 +71,7 @@ const IndexPage = ({ data }) => {
         headline={post.frontmatter.headline}
         body={post.frontmatter.body}
         aboutfeature={post.frontmatter.aboutFeature.description}
-        image={post.frontmatter.aboutFeature.image}
+        featureimage={post.frontmatter.aboutFeature.image}
         featureheading={post.frontmatter.aboutFeature.heading}
         featurelink={post.frontmatter.aboutFeature.page}
       />
@@ -108,6 +111,12 @@ IndexPage.propTypes = {
 
 export default IndexPage
 
+/* This filters the following.
+  query = gets page metadata
+  homePage = gets fields for home page from CMS
+  blogPosts = gets all latest Posts
+  webSocial = gets company social media links from CMS
+  webPartner = gets all partner logos from CMS */
 export const homePageQuery = graphql`
   query HomePageTemplate($id: String) {
     website: site {

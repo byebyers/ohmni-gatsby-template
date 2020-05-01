@@ -1,8 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+// Components
 import { IndexPageTemplate } from '../../templates/home-page'
 
+/* This is the CMS preview of home-page.js
+  You can inspect elements or console this page in the CMS
+  under Pages -> Home */
 const IndexPagePreview = ({ entry, getAsset }) => {
+  /* This links CMS entry with template variables
+    Data is pulled from author page query
+    WidgetFor is from Netlify CMS config.
+    getAsset = Returns the correct filePath
+    or in-memory preview for uploaded images */
   const data = entry.getIn(['data']).toJS()
   if (data) {
     return (
