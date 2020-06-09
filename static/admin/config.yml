@@ -1,9 +1,7 @@
 backend:
   name: git-gateway
+  local_backend: true
   branch: master
-
-# when using the default proxy server port
-local_backend: true
 
 publish_mode: editorial_workflow
 
