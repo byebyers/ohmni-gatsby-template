@@ -5,14 +5,24 @@
   align-items: center;
 }
 
-.nav-container > ul {
+.nav-flex > ul {
   display: flex;
+}
+
+.nav-container > ul {
   list-style-type: none;
   margin: 0;
+}
+
+.nav-block {
+  padding: 0 !important;
+}
+
+.nav-block > ul > li {
+  padding: 0 2rem .5rem 0 !important;
 }
 
 .nav-container > ul > li {
   padding: 0 1rem;
   margin: 0;
-  border-left: 1px solid grey;
 }

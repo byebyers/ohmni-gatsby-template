@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 //Components
 import { Link } from "gatsby"
 import Container from '../container/container'
+import Nav from '../navigation/nav'
 
 //Styles
 import './footer.scss'
@@ -18,13 +19,14 @@ const Footer = ({ siteTitle }) => {
         height={'small'}
       >
         <div className="footer-container">
-          <div className="footer-item">
+          <div className="footer-item footer-logo">
             <Link to="/" className="text-black">
               <img src="/img/logo-title.svg" alt={siteTitle} className="site-logo"/>
             </Link>
           </div>
           <div className="footer-item">
             <h2>Menu</h2>
+            <Nav type={'nav-block'} />
           </div>
           <div className="footer-item">
             <h2>Address</h2>

@@ -9,6 +9,15 @@
   justify-content: flex-start;
 }
 
+.footer-item > ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.footer-logo {
+  margin: 0 0 0 .4rem;
+}
+
 .copyRight {
   display: flex;
   justify-content: center;

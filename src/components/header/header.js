@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
         <img src="/img/logo-title.svg" alt={siteTitle} className="site-logo"/>
       </Link>
     </div>
-    <Nav />
+    <Nav type={'nav-flex'} />
   </header>
 )
 
