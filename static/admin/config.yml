@@ -172,7 +172,15 @@ collections:
         name: "social"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "info-page"}
+          - {label: "Title", name: "title", widget: "hidden", default: "social"}
           - {label: "Facebook Link", name: "facebook", widget: "string", required: false}
           - {label: "Instagram Link", name: "instagram", widget: "string", required: false}
           - {label: "Linkedin Link", name: "linkedin", widget: "string", required: false}
           - {label: "Twitter Link", name: "twitter", widget: "string", required: false}
+      - file: "content/information/address.md"
+        label: "Address"
+        name: "address"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "info-page"}
+          - {label: "Title", name: "title", widget: "hidden", default: "address"}
+          - {label: "Address", name: "address", widget: "markdown"}

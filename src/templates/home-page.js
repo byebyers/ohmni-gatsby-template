@@ -183,7 +183,7 @@ export const homePageQuery = graphql`
       }
     }
     webSocial: markdownRemark(
-      frontmatter: { templateKey: { eq: "info-page" } }
+      frontmatter: { templateKey: { eq: "info-page" }, title: { eq: "social" } }
     ) {
       id
       frontmatter {

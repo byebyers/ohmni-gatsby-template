@@ -11,7 +11,7 @@ import './footer.scss'
 
 /* This footer is the space at the bottom of the website
   and includes a site meny and company address. Site title comes from a page query  */
-const Footer = ({ siteTitle }) => {
+const Footer = ({ siteTitle, address }) => {
   return (
     <footer>
       <Container
@@ -30,6 +30,9 @@ const Footer = ({ siteTitle }) => {
           </div>
           <div className="footer-item">
             <h2>Address</h2>
+            <div className="address-block">
+              {address}
+            </div>
           </div>
         </div>
       </Container>

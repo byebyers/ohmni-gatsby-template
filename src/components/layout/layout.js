@@ -16,9 +16,17 @@ import './layout.scss'
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
-      site {
+      allSite: site {
         siteMetadata {
           title
+        }
+      }
+      webAddress: markdownRemark(
+        frontmatter: { templateKey: { eq: "info-page" }, title: { eq: "address" } }
+      ) {
+        id
+        frontmatter {
+          address
         }
       }
     }
@@ -26,7 +34,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="site-layout">
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.allSite.siteMetadata.title} />
       {/* o-lines are the fancy lines overlayed on the site. */}
       <div className="o-lines o-layout">
         <div className="o-lines_line o-layout_item o-first"></div>
@@ -37,7 +45,8 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer
-        siteTitle={data.site.siteMetadata.title}
+        siteTitle={data.allSite.siteMetadata.title}
+        address={data.webAddress.frontmatter.address}
       />
     </div>
   )
