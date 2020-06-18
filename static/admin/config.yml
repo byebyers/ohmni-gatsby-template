@@ -155,6 +155,11 @@ collections:
               - {label: "Link to another page?", name: "page", widget: "relation", collection: "pages", searchFields: ["templateKey"], valueField: "templateKey", displayFields: ["templateKey"], required: false}
               - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Image", name: "image", widget: "image"}
+      - file: "src/pages/events/index.md"
+        label: "Events"
+        name: "events"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "calendar-page"}
       - file: "src/pages/news/index.md"
         label: "News"
         name: "news"

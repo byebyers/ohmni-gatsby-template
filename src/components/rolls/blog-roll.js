@@ -3,14 +3,15 @@ import PropTypes from "prop-types"
 
 // Components
 import RollItem from './roll-item'
+import EventItem from './event-item'
 
 /* BlogRoll maps all posts onto a component.
   Posts are labeled as articles in the
   CMS under News*/
-const BlogRoll = ({ data, featured }) => {
+const BlogRoll = ({ data, type }) => {
   const { edges: posts } = data
   /* If we want to only filter feature post(s) */
-  if (featured) {
+  if (type === 'featured') {
     return (
       <div>
         {posts &&
@@ -31,6 +32,24 @@ const BlogRoll = ({ data, featured }) => {
               ) : null}
             </div>
           ))}
+      </div>
+    )
+  } else if (type === 'event') {
+    return (
+      <div>
+      {posts &&
+        posts.map(({ node: post }) => (
+          <div>
+            <EventItem
+              slug={post.fields.slug}
+              title={post.frontmatter.title}
+              excerpt={post.excerpt}
+              startdate={post.frontmatter.start_date}
+              enddate={post.frontmatter.end_date}
+              image={post.frontmatter.image}
+            />
+          </div>
+        ))}
       </div>
     )
   } else {
