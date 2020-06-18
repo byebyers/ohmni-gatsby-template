@@ -70,10 +70,12 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
       - {label: "Event Name", name: "title", widget: "string"}
-      - {label: "Start", name: "start-date", widget: "datetime"}
-      - {label: "End", name: "end-date", widget: "datetime"}
+      - {label: "Start", name: "start-date", widget: "date"}
+      - {label: "End", name: "end-date", widget: "date"}
       - {label: "Event Thumbnail", name: "image", widget: image}
+      - {label: "Photo Credit", name: "photoCredit", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "partners"
     label: "Partners"
     label_singular: "Partner"
