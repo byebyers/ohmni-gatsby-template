@@ -5,22 +5,15 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Container from '../components/container/container'
-import Content, { HTMLContent } from '../components/content/content'
 import Team from '../components/team/team'
 
 /* Check Netlify Config file for field data */
 export const TeamPageTemplate = ({
-  body,
-  contentComponent,
   data,
   advisordata,
  }) => {
-  const PageContent = contentComponent || Content
   return (
     <div>
-      <Container size={'regular'}>
-          <PageContent className="content" content={body} />
-      </Container>
       <Container size={'regular'}>
         <Team
           data={data}
@@ -44,13 +37,9 @@ TeamPageTemplate.propTypes = {
 }
 
 const TeamPage = ({ data }) => {
-  const { teamPage: page } = data
-
   return (
     <Layout>
       <TeamPageTemplate
-        contentComponent={HTMLContent}
-        body={page.html}
         data={data.teamMembers}
         advisordata={data.advisorMembers}
       />
@@ -69,10 +58,7 @@ export default TeamPage
   teamMemvers = all Team members from CMS
   advisorMembers = all Advisor members from CMS */
 export const teamPageQuery = graphql`
-  query TeamPageQuery($id: String) {
-    teamPage: markdownRemark(id: { eq: $id } frontmatter: {templateKey: {eq: "team-page"}, path: {eq: "/team"}}, fields: {}) {
-      html
-    }
+  query TeamPageQuery {
     teamMembers: allMarkdownRemark(
       filter: {frontmatter: {templateKey: {eq: "team-page"}, subKey: {eq: "team-member"}}}
     ) {

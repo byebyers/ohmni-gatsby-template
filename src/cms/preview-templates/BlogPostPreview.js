@@ -32,6 +32,7 @@ const BlogPostPreview = ({ entry, widgetFor, fieldsMetaData  }) => {
         content={data.body}
         description={data.description}
         image={data.image}
+        youtubeid={data.youtube}
         author={postAuthor}
         thumbnail={authorThumb}
         date={postDate}

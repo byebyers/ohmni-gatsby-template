@@ -25,15 +25,16 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: true}
       - {label: "Author", name: "author", widget: "relation", collection: "authors", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: true}
+      - {label: "Tags", name: "tags", hint: "Separate tags with a comma", widget: "list"}
+      - {label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featured", widget: "boolean", required: false, default: false}
-      - {label: "Featured Image", name: "image", widget: image}
-      - {label: "Photo Credit", name: "photoCredit", widget: "string"}
+      - {label: "YouTube Video Id", name: "youtube", hint: "Leave blank if this is not a video post", widget: "string"}
+      - {label: "Featured Image", name: "image", hint: "Required even for videos. If not, please use photos that are larger than 800px", widget: image, required: true}
+      - {label: "Photo Credit", name: "photoCredit", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "authors"
     label: "Authors"
@@ -170,7 +171,7 @@ collections:
         name: "team"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown", requred: false}
   - name: "information"
     label: "Information"
     files:

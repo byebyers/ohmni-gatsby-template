@@ -28,6 +28,7 @@ const BlogRoll = ({ data, type }) => {
                   date={post.frontmatter.date}
                   timeToRead={post.timeToRead}
                   image={post.frontmatter.image}
+                  video={post.frontmatter.youtube}
                 />
               ) : null}
             </div>
@@ -67,6 +68,7 @@ const BlogRoll = ({ data, type }) => {
               date={post.frontmatter.date}
               timeToRead={post.timeToRead}
               image={post.frontmatter.image}
+              video={post.frontmatter.youtube}
             />
           ))}
       </div>

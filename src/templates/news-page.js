@@ -57,6 +57,7 @@ export const blogPageQuery = graphql`
             category
             date(formatString: "MMMM DD, YYYY")
             featured
+            youtube
             image {
               childImageSharp {
                 fluid(maxWidth: 1000, quality: 100) {

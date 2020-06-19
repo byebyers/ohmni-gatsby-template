@@ -18,7 +18,8 @@ const RollItem = ({
   author,
   date,
   timeToRead,
-  image
+  image,
+  video,
 }) => {
   const letter = rollType[0]
   return (
@@ -58,7 +59,23 @@ const RollItem = ({
       </div>
       {/* Image */}
       <div className={`roll-image-container ${rollType}-image`}>
-        {image ? (
+        {video ? (
+
+            <Link
+              className="roll-post-image"
+              to={slug}
+            >
+            <div className="watermark">
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: image,
+                  alt: `featured image for post ${title}`,
+                }}
+              />
+            </div>
+            </Link>
+
+        ) : (
 
             <Link
               className="roll-post-image"
@@ -72,7 +89,7 @@ const RollItem = ({
             />
             </Link>
 
-        ) : null}
+        )}
       </div>
     </article>
   )

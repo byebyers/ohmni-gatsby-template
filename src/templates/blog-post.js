@@ -11,6 +11,7 @@ import Content, { HTMLContent } from '../components/content/content'
 import { kebabCase } from 'lodash'
 import TagSection from '../components/tag-section/tag-section'
 import Share from '../components/share/share'
+import YouTubePlayer from '../components/youtube/youtube'
 
 //Styles
 import './blog-post.scss'
@@ -20,6 +21,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
+  youtubeid,
   image,
   author,
   thumbnail,
@@ -75,12 +77,10 @@ export const BlogPostTemplate = ({
           />
         </div>
         <div className="post-image">
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: image,
-              alt: `featured image thumbnail for author ${title}`,
-            }}
-          />
+          {youtubeid
+            ? <YouTubePlayer id={youtubeid} title={title} />
+            : <PreviewCompatibleImage imageInfo={{ image: image, alt: `featured image thumbnail for post ${title}`, }} />
+          }
           <div className="post-fine-details photo-details">
             <span>Photo by: {photoCredit}</span>
           </div>
@@ -99,6 +99,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  youtubeid: PropTypes.string,
   author: PropTypes.string,
   thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
@@ -116,6 +117,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        youtubeid={post.frontmatter.youtube}
         image={post.frontmatter.image}
         author={post.frontmatter.author}
         thumbnail={post.fields.author.frontmatter.image}
@@ -191,6 +193,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        youtube
         image {
           childImageSharp {
             fluid(maxWidth: 1000, quality: 100) {
