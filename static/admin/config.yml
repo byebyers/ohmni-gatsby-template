@@ -156,6 +156,25 @@ collections:
               - {label: "Link to another page?", name: "page", widget: "relation", collection: "pages", searchFields: ["templateKey"], valueField: "templateKey", displayFields: ["templateKey"], required: false}
               - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Image", name: "image", widget: "image"}
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            hint: "Not listed on page. CMS example only"
+            summary: '{{fields.quote}} - {{fields.dude.name}}'
+            fields:
+              - {label: "Quote", name: "quote", widget: "string", default: "Everything is Awesome!"}
+              - label: "Author"
+                name: "dude"
+                widget: "object"
+                fields:
+                  - {label: "Name", name: "name", widget: "string", default: "Emmet"}
+          - label: "File Name"
+            name: "file-name"
+            widget: "file"
+            hint: "Not listed on page. CMS example only"
+            media_library:
+              config:
+                multiple: false
       - file: "src/pages/events/index.md"
         label: "Events"
         name: "events"
