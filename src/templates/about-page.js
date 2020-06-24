@@ -36,7 +36,7 @@ export const AboutPageTemplate = ({
         banner={banner}
       />
       <Container size={'regular'}>
-          <PageContent className="content" content={content} />
+        <PageContent className="content" content={content} />
       </Container>
       <Container size={'large'}>
         <Feature
