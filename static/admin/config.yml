@@ -47,8 +47,8 @@ collections:
         media_library:
           config:
             default_transformations:
-              - fetch_format: auto
-                width: 1280
+              - fetch_format: auto:20
+                width: auto
                 quality: 75
                 crop: fill
       - {label: "Photo Credit", name: "photoCredit", widget: "string", required: false}
