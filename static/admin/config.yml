@@ -39,7 +39,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featured", widget: "boolean", required: false, default: false}
-      - {label: "YouTube Video Id", name: "youtube", hint: "Leave blank if this is not a video post", widget: "string"}
+      - {label: "YouTube Video Id", name: "youtube", hint: "Leave blank if this is not a video post", widget: "string", required: false}
       - {label: "Featured Image", name: "image", hint: "Required even for videos. If not, please use photos that are larger than 800px", widget: image, required: true}
       - {label: "Photo Credit", name: "photoCredit", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
