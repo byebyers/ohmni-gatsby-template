@@ -9,7 +9,6 @@ publish_mode: editorial_workflow
 
 media_library:
   name: cloudinary
-  output_filename_only: true
   config:
     cloud_name: dxywbennu
     api_key: 913453773234141
