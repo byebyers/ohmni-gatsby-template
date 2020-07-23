@@ -26,4 +26,4 @@ CMS.registerPreviewTemplate('events', EventPostPreview)
 CMS.registerPreviewStyle(typography.toString(), { raw: true })
 
 /* This registers media library from Cloudinary */
-CMS.registerMediaLibrary(cloudinary);
+CMS.registerMediaLibrary(cloudinary)
