@@ -17,7 +17,7 @@ description: >-
   Her richly patterned images are at the intersection of cultural history and
   photography, textiles, portraiture, and politics.
 image: >-
-  https://res.cloudinary.com/dxywbennu/image/upload/c_fill,f_auto,q_75,w_auto:20/v1587504614/ohmni-test/cdaily20200415_michaeljeter_mixtape_ga_1920x1080.png
+  https://res.cloudinary.com/dxywbennu/image/upload/c_fill,f_auto,q_75,w_1281/v1587504609/ohmni-test/Screenshot_2019-11-12%20Motion%20Graphics%20on%20Behance.jpg
 ---
 Imagine having traveled to sixty-seven countries, resided in seven, and speaking five languages. Imagine growing up in a multicultural household with two linguist parents. Imagine, in mid-September 2001, being a Yemeni-Bosnian-American child, told that you could no longer speak your language. Imagine [Alia Ali](http://alia-ali.com).
 
