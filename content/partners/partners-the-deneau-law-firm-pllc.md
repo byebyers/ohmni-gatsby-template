@@ -1,5 +1,6 @@
 ---
 templateKey: partner-page
 title: 'The Deneau Law Firm, PLLC'
-image: /img/deneau-title-2x.png
+image: >-
+  https://res.cloudinary.com/dxywbennu/image/upload/v1595539868/ohmni-test/deneau-title-2x_kuzgrf.png
 ---
