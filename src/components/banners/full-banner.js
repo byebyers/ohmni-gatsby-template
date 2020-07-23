@@ -12,7 +12,7 @@ const Fullban = ({ heading, subheading, banner }) => {
       /* Checks image source */
       style={{
         backgroundImage: `url('${
-          !!banner.childImageSharp ? banner.childImageSharp.fluid.src : banner
+          banner
         }')`
       }}
     className="big-banner display-banner">

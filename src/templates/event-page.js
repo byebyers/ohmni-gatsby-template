@@ -73,7 +73,7 @@ export const EventPostTemplate = ({
 const EventPage = ({ data }) => {
   const { eventPost: date } = data
   const siteUrl = data.eventSite.siteMetadata.siteUrl
-  const imgPath = date.frontmatter.image.childImageSharp.fluid.originalImg
+  const imgPath = date.frontmatter.image
   const siteImg = siteUrl + imgPath
   return (
     <Layout>
@@ -138,14 +138,7 @@ export const pageQuery = graphql`
         title
         start_date(formatString: "dddd, MMMM Do")
         end_date(formatString: "dddd, MMMM Do")
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
-              ...GatsbyImageSharpFluid
-              originalImg
-            }
-          }
-        }
+        image
         description
         photoCredit
       }

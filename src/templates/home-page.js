@@ -129,26 +129,13 @@ export const homePageQuery = graphql`
       frontmatter {
         heading
         subheading
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        image
         headline
-        body
         aboutFeature {
           heading
           description
           page
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          image
         }
       }
     }
@@ -171,13 +158,7 @@ export const homePageQuery = graphql`
             author
             date(formatString: "MMMM DD, YYYY")
             featured
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            image
           }
         }
       }
@@ -201,13 +182,7 @@ export const homePageQuery = graphql`
         node {
           frontmatter {
             title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            image
           }
         }
       }

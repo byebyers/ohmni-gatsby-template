@@ -106,36 +106,18 @@ export const aboutPageQuery = graphql`
       frontmatter {
         heading
         subheading
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        image
         aboutNews{
           description
           heading
           page
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          image
         }
         aboutTeam {
           description
           heading
           page
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          image
         }
       }
     }

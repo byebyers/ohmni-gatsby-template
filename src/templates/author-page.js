@@ -100,13 +100,7 @@ export const query = graphql`
         inWebsite
         inMail
         description
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        image
       }
     }
     authorPosts: allMarkdownRemark(
@@ -128,13 +122,7 @@ export const query = graphql`
             author
             category
             date(formatString: "MMMM DD, YYYY")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            image
           }
         }
       }
