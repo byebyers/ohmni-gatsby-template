@@ -48,8 +48,8 @@ collections:
           config:
             default_transformations:
               - fetch_format: auto
-                width: 800
-                quality: auto
+                width: 1280
+                quality: 75
                 crop: fill
       - {label: "Photo Credit", name: "photoCredit", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
