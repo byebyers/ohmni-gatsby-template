@@ -48,7 +48,7 @@ collections:
           config:
             default_transformations:
               - fetch_format: auto
-                width: auto:breakpoints_200_1920_100_15
+                width: auto
                 quality: 75
                 crop: fill
       - {label: "Photo Credit", name: "photoCredit", widget: "string", required: false}
