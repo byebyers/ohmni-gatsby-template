@@ -48,7 +48,7 @@ collections:
           config:
             default_transformations:
               - fetch_format: auto
-                width: auto
+                width: auto:20
                 quality: 75
                 crop: fill
       - {label: "Photo Credit", name: "photoCredit", widget: "string", required: false}

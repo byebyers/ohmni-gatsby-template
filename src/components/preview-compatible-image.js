@@ -9,12 +9,12 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   const { alt = '', image } = imageInfo
 
   if (!!image && typeof image === 'string') {
-    return <img style={imageStyle} src={image} alt={alt} />
+    return <img sizes="1280px" style={imageStyle} src={image} alt={alt} />
   }
 
   else {
     return (
-      <img style={imageStyle} src="/img/placeholder-image.png" alt="This is a placeholder" />
+      <img sizes="1280px" style={imageStyle} src="/img/placeholder-image.png" alt="This is a placeholder" />
     )
   }
 }
