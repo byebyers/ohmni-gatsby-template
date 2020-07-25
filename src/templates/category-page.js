@@ -57,7 +57,13 @@ export const query = graphql`
             author
             category
             date(formatString: "MMMM DD, YYYY")
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

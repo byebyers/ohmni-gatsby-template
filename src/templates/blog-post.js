@@ -109,7 +109,7 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { blogposts: post } = data
   const siteUrl = data.blogsite.siteMetadata.siteUrl
-  const imgPath = post.frontmatter.image
+  const imgPath = post.frontmatter.image.childImageSharp.fluid.originalImg
   const siteImg = siteUrl + imgPath
   return (
     <Layout>
@@ -178,7 +178,13 @@ export const pageQuery = graphql`
       fields {
         author {
           frontmatter {
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
         slug
@@ -188,7 +194,14 @@ export const pageQuery = graphql`
         title
         description
         youtube
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid
+              originalImg
+            }
+          }
+        }
         author
         tags
         photoCredit

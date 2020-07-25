@@ -16,8 +16,7 @@ title: Alai Ali and the Power of Seeing
 description: >-
   Her richly patterned images are at the intersection of cultural history and
   photography, textiles, portraiture, and politics.
-image: >-
-  https://res.cloudinary.com/dxywbennu/image/upload/c_fill,f_auto,q_75,w_auto:20/v1587504604/ohmni-test/b932b09e31bb5d3c77359ae6e47e59ab.0.webp
+image: /img/1920x1080-alia-ali.jpg
 ---
 Imagine having traveled to sixty-seven countries, resided in seven, and speaking five languages. Imagine growing up in a multicultural household with two linguist parents. Imagine, in mid-September 2001, being a Yemeni-Bosnian-American child, told that you could no longer speak your language. Imagine [Alia Ali](http://alia-ali.com).
 

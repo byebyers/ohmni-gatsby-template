@@ -7,12 +7,6 @@ local_backend: true
 
 publish_mode: editorial_workflow
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: dxywbennu
-    api_key: 913453773234141
-
 media_folder: static/img
 public_folder: /img
 
@@ -38,19 +32,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featured", widget: "boolean", required: false, default: false}
-      - {label: "YouTube Video Id", name: "youtube", hint: "Leave blank if this is not a video post", widget: "string", required: false}
-      - label: "Featured Image"
-        name: "image"
-        widget: "image"
-        requred: true
-        hint: "Required even for videos. If not, please use photos that are larger than 800px"
-        media_library:
-          config:
-            default_transformations:
-              - fetch_format: auto
-                width: auto:20
-                quality: 75
-                crop: fill
+      - {label: "YouTube Video Id", name: "youtube", hint: "Leave blank if this is not a video post", widget: "string"}
+      - {label: "Featured Image", name: "image", hint: "Required even for videos. If not, please use photos that are larger than 800px", widget: image, required: true}
       - {label: "Photo Credit", name: "photoCredit", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "authors"

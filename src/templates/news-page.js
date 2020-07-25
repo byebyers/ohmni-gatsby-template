@@ -58,7 +58,13 @@ export const blogPageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             featured
             youtube
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

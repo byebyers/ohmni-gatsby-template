@@ -53,7 +53,13 @@ export const calPageQuery = graphql`
             templateKey
             start_date(formatString: "dddd, MMMM Do")
             end_date(formatString: "dddd, MMMM Do")
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

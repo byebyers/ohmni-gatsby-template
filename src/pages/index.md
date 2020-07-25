@@ -1,7 +1,6 @@
 ---
 templateKey: home-page
-image: >-
-  https://res.cloudinary.com/dxywbennu/image/upload/v1587504618/ohmni-test/james-day-urmik_ustci-unsplash.jpg
+image: /img/james-day-urmik_ustci-unsplash.jpg
 heading: >-
   Aesthetics are undeniably pleasing. How can you become your most true
   Kinfeshion self?  
@@ -14,8 +13,7 @@ aboutFeature:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. In vitae turpis massa
     sed elementum tempus egestas sed.
-  image: >-
-    https://res.cloudinary.com/dxywbennu/image/upload/v1587504623/ohmni-test/olivier-guillard-pb9uuryyxsi-unsplash.jpg
+  image: /img/susan-yin-yqhhlcs9hto-unsplash.jpg
   heading: About Kinfeshion
   page: about-page
 ---

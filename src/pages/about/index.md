@@ -14,12 +14,10 @@ aboutNews:
     change. For me, the summer will be pure gray - mother-of-pearl gray, very
     pale gray. To me, this is the big statement for summer. Then we have light
     blue, light turquoise, lots of pink.
-  image: >-
-    https://res.cloudinary.com/dxywbennu/image/upload/v1595540370/ohmni-test/branden-harvey-wyn0qfdixw0-unsplash_y10fv0.jpg
+  image: /img/james-day-urmik_ustci-unsplash.jpg
 path: /about
 templateKey: about-page
-image: >-
-  https://res.cloudinary.com/dxywbennu/image/upload/v1587504618/ohmni-test/james-day-urmik_ustci-unsplash.jpg
+image: /img/mimi-thian-vhq0cw2eua-unsplash.jpg
 aboutTeam:
   page: team-page
   heading: Expertise behind Kinfeshion
@@ -29,10 +27,8 @@ aboutTeam:
     practical or visual reality. War taught me that not everything is glamorous.
     The difference between style and fashion is quality. War taught me that not
     everything is glamorous. War taught me that not everything is glamorous.
-  image: >-
-    https://res.cloudinary.com/dxywbennu/image/upload/v1595540340/ohmni-test/mimi-thian-vhq0cw2eua-unsplash_abafnf.jpg
-file-name: >-
-  https://res.cloudinary.com/dxywbennu/image/upload/v1587504606/ohmni-test/gatsby-astronaut.png
+  image: /img/branden-harvey-wyn0qfdixw0-unsplash.jpg
+file-name: /img/branden-harvey-wyn0qfdixw0-unsplash.jpg
 ---
 I think the idea of mixing luxury and mass-market fashion is very modern, very now - no one wears head-to-toe designer anymore.
 

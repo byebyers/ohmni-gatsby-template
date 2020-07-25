@@ -12,7 +12,7 @@ const Halfban = ({ heading, subheading, banner }) => {
       /* Checks image source */
       style={{
         backgroundImage: `url('${
-          banner
+          !!banner.childImageSharp ? banner.childImageSharp.fluid.src : banner
         }')`
       }}
     className="half-banner display-banner">

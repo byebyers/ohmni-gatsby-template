@@ -1,8 +1,7 @@
 ---
 templateKey: author-page
 title: Jacob Byers
-image: >-
-  https://res.cloudinary.com/dxywbennu/image/upload/v1587504609/ohmni-test/MVIMG_20191118_144944%7E2.jpg
+image: img/MVIMG_20191118_144944~2.jpg
 description: >-
   An American creative developer based in Arizona, focused on digital UX/UI
   experiences. I’ve worked with local companies such as Front Pourch Brewing,

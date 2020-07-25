@@ -4,9 +4,6 @@ import CMS from 'netlify-cms-app'
 /* Data from typography.js */
 import typography from '../utils/typography'
 
-/* Data from Cloudinary */
-import cloudinary from 'netlify-cms-media-library-cloudinary'
-
 //Components
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
@@ -24,6 +21,3 @@ CMS.registerPreviewTemplate('events', EventPostPreview)
 
 /* This registers styles from typography.js */
 CMS.registerPreviewStyle(typography.toString(), { raw: true })
-
-/* This registers media library from Cloudinary */
-CMS.registerMediaLibrary(cloudinary)
